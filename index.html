@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas Sales | Portfólio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="page-top">
+
+        <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container-fluid">
+            <button class="btn btn-outline-light me-3" type="button" id="sidebarToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a class="navbar-brand text-white" href="#page-top">Lucas Sales</a>
+        </div>
+    </nav>
+
+        <div class="sidebar" id="sidebar">
+        <div class="sidebar-content">
+            <ul class="sidebar-nav">
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="#sobre" title="Sobre Mim">
+                        <i class="fas fa-user"></i>
+                        <span class="sidebar-text">Sobre Mim</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="#competencias" title="Competências">
+                        <i class="fas fa-cogs"></i>
+                        <span class="sidebar-text">Competências</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="#projetos" title="Projetos">
+                        <i class="fas fa-folder-open"></i>
+                        <span class="sidebar-text">Projetos</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="#contato" title="Contato">
+                        <i class="fas fa-envelope"></i>
+                        <span class="sidebar-text">Contato</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+        <div class="main-content" id="mainContent">
+        <header class="masthead d-flex justify-content-center align-items-center">
+            <div class="container text-center text-white">
+                <img src="assets/images/foto-perfil.jpg" alt="Lucas Sales" class="img-fluid rounded-circle mb-3 masthead-img">
+                <h1 class="display-4 fw-bold">Lucas Sales</h1>
+                <hr class="divider">
+                <p class="text-white-75 font-weight-light mb-5">Desenvolvedor Java | SQL Server | Software developer</p>
+                <a class="btn btn-primary btn-xl" href="#sobre">Descubra Mais</a>
+            </div>
+        </header>
+
+        <section id="sobre" class="py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-8 offset-md-2 text-center">
+                        <h2 class="h4">Olá, eu sou o Lucas!</h2>
+                        <p>Estudante do 6º semestre de Ciência da Computação (UNIP), buscando atuar ativamente na área de programação.</p>
+                        <p>Tenho experiência prática em desenvolvimento full stack, utilizando Java, Spring Boot, SQL Server, HTML, CSS, JavaScript e Bootstrap. Atuo em projetos reais, desde a modelagem de dados até a implementação de funcionalidades e implantação em produção.</p>
+                        <p>Com um perfil dinâmico, tenho facilidade para identificar problemas, propor soluções práticas e trabalhar em equipe. Quando não estou codificando, gosto de explorar novas tecnologias e aprimorar boas práticas de desenvolvimento.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="competencias" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5">Minhas Competências</h2>
+                <div class="row text-center">
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h4 class="card-title mb-3">Tecnologias</h4>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><i class="fa-brands fa-java me-2"></i> Java SpringBoot | Thymeleaf | SQL Server</li>
+                                    <li class="list-group-item"><i class="fa-brands fa-html5 me-2"></i> HTML | CSS | Bootstrap | JavaScript</li>
+                                    <li class="list-group-item"><i class="fa-solid fa-database me-2"></i> SQL Server | MySQL</li>
+                                    <li class="list-group-item"><i class="fa-brands fa-git-alt me-2"></i> Git | GitHub</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h4 class="card-title mb-3">Habilidades</h4>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><i class="fa-solid fa-users me-2"></i> Comunicação e trabalho em equipe</li>
+                                    <li class="list-group-item"><i class="fa-solid fa-brain me-2"></i> Capacidade de adaptação</li>
+                                    <li class="list-group-item"><i class="fa-solid fa-lightbulb me-2"></i> Foco no usuário e solução de problemas</li>
+                                    <li class="list-group-item"><i class="fa-solid fa-globe me-2"></i> Inglês (Fluente)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Meus Projetos</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100 shadow-sm projeto-card" data-bs-toggle="modal" data-bs-target="#contadorModal">
+                            <img src="assets/images/contador-amor.jpg" class="card-img-top" alt="Contador de Amor">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title">Contador de Amor</h5>
+                                <p class="card-text text-muted mt-auto">Um projeto pessoal feito para a minha namorada.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100 shadow-sm projeto-card" data-bs-toggle="modal" data-bs-target="#sistemaGestaoModal">
+                            <img src="assets/images/sistema-gestao.jpg" class="card-img-top" alt="Sistema de Gestão">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title">Sistema de Gestão (Full-Stack)</h5>
+                                <p class="card-text text-muted mt-auto">Desenvolvimento e implementação de um sistema web completo.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100 shadow-sm projeto-card" data-bs-toggle="modal" data-bs-target="#totemModal">
+                            <img src="assets/images/totem.jpg" class="card-img-top" alt="Totem Acadêmico">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title">Projetos Acadêmicos</h5>
+                                <p class="card-text text-muted mt-auto">Desenvolvimento de um totem e sistema de análise.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="py-5 bg-dark text-white">
+            <div class="container text-center">
+                <h2 class="mb-4">Vamos conversar?</h2>
+                <p class="lead">Estou sempre aberto a novas oportunidades e desafios.</p>
+                <div class="d-flex justify-content-center gap-3 mt-4">
+                    <a href="https://www.linkedin.com/in/lucas-salees/" target="_blank" class="btn btn-outline-light"><i class="fab fa-linkedin fa-2x"></i></a>
+                    <a href="https://github.com/lucasSalees" target="_blank" class="btn btn-outline-light"><i class="fab fa-github fa-2x"></i></a>
+                    <a href="mailto:contactlucassales@gmail.com" target="_blank" class="btn btn-outline-light"><i class="fas fa-envelope fa-2x"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-primary text-white text-center py-3">
+            <p class="m-0">&copy; 2025 Lucas Sales. Todos os direitos reservados.</p>
+        </footer>
+
+                <div class="modal fade" id="contadorModal" tabindex="-1" aria-labelledby="contadorModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="contadorModalLabel">Contador de Amor</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="assets/images/contador-amor.jpg" class="img-fluid mb-3" alt="Contador de Amor">
+                        <h4>Descrição do Projeto</h4>
+                        <p>Este site simples e intuitivo calcula o tempo (em anos, meses, dias, horas, minutos e segundos) desde o início do meu relacionamento, demonstrando minhas habilidades em HTML, CSS e JavaScript. É um projeto pessoal que demonstra minhas habilidades em front-end.</p>
+                        <p><strong>Tecnologias:</strong> HTML, CSS, JavaScript, Bootstrap.</p>
+                        <p>
+                            <a href="https://contador-de-amor.netlify.app/" class="btn btn-primary me-2" target="_blank">Ver Projeto</a>
+                            <a href="seu_link_github_aqui" class="btn btn-secondary" target="_blank">Ver Código</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="sistemaGestaoModal" tabindex="-1" aria-labelledby="sistemaGestaoModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="sistemaGestaoModalLabel">Sistema de Gestão (Full-Stack)</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="assets/images/sistema-gestao.jpg" class="img-fluid mb-3" alt="Sistema de Gestão">
+                        <h4>Descrição do Projeto</h4>
+                        <p>Desenvolvimento e implementação, sob demanda, de um sistema web completo para a gestão de estoque e relatórios. Demonstração de conhecimentos técnicos em back-end com Java e Spring Boot, e front-end com HTML, CSS, Bootstrap e JavaScript. A modelagem e administração do banco de dados foram realizadas com SQL Server.</p>
+                        <p><strong>Tecnologias:</strong> Java, Spring Boot, HTML, CSS, Bootstrap, JavaScript, SQL Server.</p>
+                        <p>
+                            <a href="#" class="btn btn-primary me-2" target="_blank">Ver Projeto</a>
+                            <a href="seu_link_github_aqui" class="btn btn-secondary" target="_blank">Ver Código</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="totemModal" tabindex="-1" aria-labelledby="totemModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="totemModalLabel">Projetos Acadêmicos</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="assets/images/totem.jpg" class="img-fluid mb-3" alt="Totem Acadêmico">
+                        <h4>Descrição do Projeto</h4>
+                        <p>Participação no desenvolvimento de um sistema para análise de temperatura, umidade e precipitação, e de um totem.</p>
+                        <p><strong>Tecnologias:</strong> Java e SQL.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
