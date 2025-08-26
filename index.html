@@ -1,224 +1,375 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucas Sales | Portfólio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lucas Sales dos Santos - Java Developer | SQL Server | Software Developer. Portfólio profissional com projetos e experiências.">
+    <meta name="keywords" content="Java Developer, SQL Server, Software Developer, Full Stack, Spring Boot, HTML, CSS, JavaScript">
+    <meta name="author" content="Lucas Sales dos Santos">
+    
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+    <!-- BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Lucas Sales dos Santos - Java Developer | Portfólio</title>
 </head>
-<body id="page-top">
+<body>
+    
+    <header class="fixed-top">
+        <div class="interface">
+            <div class="logo">
+                <a href="#inicio">
+                    <span class="logo-text">Lucas<span class="accent">Sales</span></span>
+                </a>
+            </div>
 
-        <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
-        <div class="container-fluid">
-            <button class="btn btn-outline-light me-3" type="button" id="sidebarToggle">
-                <i class="fas fa-bars"></i>
-            </button>
-            <a class="navbar-brand text-white" href="#page-top">Lucas Sales</a>
-        </div>
-    </nav>
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#especialidades">Especialidades</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#portfolio">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
 
-        <div class="sidebar" id="sidebar">
-        <div class="sidebar-content">
-            <ul class="sidebar-nav">
-                <li class="sidebar-item">
-                    <a class="sidebar-link" href="#sobre" title="Sobre Mim">
-                        <i class="fas fa-user"></i>
-                        <span class="sidebar-text">Sobre Mim</span>
-                    </a>
-                </li>
-                <li class="sidebar-item">
-                    <a class="sidebar-link" href="#competencias" title="Competências">
-                        <i class="fas fa-cogs"></i>
-                        <span class="sidebar-text">Competências</span>
-                    </a>
-                </li>
-                <li class="sidebar-item">
-                    <a class="sidebar-link" href="#projetos" title="Projetos">
-                        <i class="fas fa-folder-open"></i>
-                        <span class="sidebar-text">Projetos</span>
-                    </a>
-                </li>
-                <li class="sidebar-item">
-                    <a class="sidebar-link" href="#contato" title="Contato">
-                        <i class="fas fa-envelope"></i>
-                        <span class="sidebar-text">Contato</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
+            <div class="btn-contato">
+                <a href="#contato">
+                    <button class="btn-primary">Contato</button>
+                </a>
+            </div>
 
-        <div class="main-content" id="mainContent">
-        <header class="masthead d-flex justify-content-center align-items-center">
-            <div class="container text-center text-white">
-                <img src="assets/images/foto-perfil.jpg" alt="Lucas Sales" class="img-fluid rounded-circle mb-3 masthead-img">
-                <h1 class="display-4 fw-bold">Lucas Sales</h1>
-                <hr class="divider">
-                <p class="text-white-75 font-weight-light mb-5">Desenvolvedor Java | SQL Server | Software developer</p>
-                <a class="btn btn-primary btn-xl" href="#sobre">Descubra Mais</a>
+            <div class="btn-abrir-menu" id="btn-menu">
+                <i class="bi bi-list"></i>
+            </div>
+
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="btn-fechar">
+                    <i class="bi bi-x-lg"></i>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#especialidades">Especialidades</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#portfolio">Projetos</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="overlay-menu" id="overlay-menu"></div>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="topo-do-site">
+            <div class="interface">
+                <div class="flex">
+                    <div class="txt-topo-site">
+                        <h1>DESENVOLVENDO SOLUÇÕES <span class="accent">INOVADORAS</span><span class="dot">.</span></h1>
+                        <p class="lead">Java Developer especializado em desenvolvimento Full Stack com Spring Boot, SQL Server e tecnologias web modernas. Transformo ideias em aplicações robustas e funcionais.</p>
+
+                        <div class="btn-group-hero">
+                            <a href="#portfolio" class="btn-hero btn-primary">
+                                <i class="bi bi-code-slash"></i>
+                                Ver Projetos
+                            </a>
+                            <a href="#contato" class="btn-hero btn-outline">
+                                <i class="bi bi-envelope"></i>
+                                Entre em Contato
+                            </a>
+                        </div>
+
+                        <div class="tech-stack">
+                            <span class="tech-label">Tecnologias:</span>
+                            <div class="tech-icons">
+                                <span class="tech-item">Java</span>
+                                <span class="tech-item">Spring Boot</span>
+                                <span class="tech-item">SQL Server</span>
+                                <span class="tech-item">JavaScript</span>
+                                <span class="tech-item">Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="img-topo-site">
+                        <div class="profile-card">
+                            <div class="profile-image">
+                                <img src="images/lucas.png" alt="Lucas Sales dos Santos - Java Developer" loading="lazy">
+                            </div>
+                            <div class="profile-info">
+                                <h3>Lucas Sales dos Santos</h3>
+                                <p>Java Developer | 24 anos</p>
+                                <div class="profile-stats">
+                                    <div class="stat">
+                                        <span class="stat-number">2+</span>
+                                        <span class="stat-label">Anos Experiência</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-number">10+</span>
+                                        <span class="stat-label">Projetos</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="especialidades" class="especialidades">
+            <div class="interface">
+                <h2 class="titulo">MINHAS <span class="accent">ESPECIALIDADES</span><span class="dot">.</span></h2>
+                <div class="flex">
+                    <div class="especialidades-box" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-layers"></i>
+                        </div>
+                        <h3>Desenvolvimento Full-Stack</h3>
+                        <p>Desenvolvimento completo de aplicações web utilizando Java, Spring Boot no backend e HTML, CSS, JavaScript, Bootstrap no frontend.</p>
+                        <div class="tech-list">
+                            <span>Java</span>
+                            <span>Spring Boot</span>
+                            <span>Thymeleaf</span>
+                        </div>
+                    </div>
+
+                    <div class="especialidades-box" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-database"></i>
+                        </div>
+                        <h3>Banco de Dados</h3>
+                        <p>Modelagem, administração e otimização de bancos de dados relacionais, com expertise em SQL Server e MySQL.</p>
+                        <div class="tech-list">
+                            <span>SQL Server</span>
+                            <span>MySQL</span>
+                            <span>Modelagem</span>
+                        </div>
+                    </div>
+
+                    <div class="especialidades-box" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-gear"></i>
+                        </div>
+                        <h3>Sistemas de Gestão</h3>
+                        <p>Criação de sistemas web para controle de estoque, relatórios e gestão empresarial com foco na experiência do usuário.</p>
+                        <div class="tech-list">
+                            <span>CRUD</span>
+                            <span>MVC</span>
+                            <span>Git/GitHub</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="sobre">
+            <div class="interface">
+                <div class="flex">
+                    <div class="img-sobre" data-aos="fade-right">
+                        <div class="about-image-wrapper">
+                            <img src="images/lucas-about.jpg" alt="Lucas Sales dos Santos trabalhando" loading="lazy">
+                            <div class="experience-badge">
+                                <span class="badge-number">2+</span>
+                                <span class="badge-text">Anos de<br>Experiência</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="txt-sobre" data-aos="fade-left">
+                        <h2>MUITO PRAZER, <span class="accent">SOU LUCAS SALES</span><span class="dot">.</span></h2>
+                        
+                        <p>Estudante do 6º semestre de Ciência da Computação na UNIP, com 24 anos e uma paixão genuína por desenvolvimento de software. Atualmente trabalho como Programador Multi Plataforma na INPUT TECNOLOGIA, onde desenvolvo sistemas utilizando Java e Spring Boot.</p>
+                        
+                        <p>Minha jornada na programação começou com curiosidade e se transformou em expertise prática. Tenho experiência sólida em desenvolvimento full stack, desde a modelagem de dados até a implementação de funcionalidades e implantação em produção. Fluente em inglês e com facilidade para trabalhar em equipe.</p>
+
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Desenvolvimento Full Stack</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Java & Spring Boot</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>SQL Server & MySQL</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Inglês Fluente</span>
+                            </div>
+                        </div>
+
+                        <div class="btn-social">
+                            <a href="https://www.linkedin.com/in/lucas-salees/" target="_blank" rel="noopener" aria-label="LinkedIn do Lucas">
+                                <button><i class="bi bi-linkedin"></i></button>
+                            </a>
+                            <a href="https://github.com/lucasSalees" target="_blank" rel="noopener" aria-label="GitHub do Lucas">
+                                <button><i class="bi bi-github"></i></button>
+                            </a>
+                            <a href="mailto:contactlucassales@gmail.com" aria-label="Email do Lucas">
+                                <button><i class="bi bi-envelope"></i></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio">
+            <div class="interface">
+                <h2 class="titulo">MEU <span class="accent">PORTFÓLIO</span><span class="dot">.</span></h2>
+                
+                <div class="portfolio-grid">
+                    <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="portfolio-image">
+                            <img src="images/projeto-gestao.jpg" alt="Sistema de Gestão Full-Stack" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-content">
+                                    <h3>Sistema de Gestão (Full-Stack)</h3>
+                                    <p>Sistema web completo para gestão de estoque e relatórios desenvolvido com Java, Spring Boot e SQL Server.</p>
+                                    <div class="portfolio-tech">
+                                        <span>Java</span>
+                                        <span>Spring Boot</span>
+                                        <span>SQL Server</span>
+                                        <span>Bootstrap</span>
+                                    </div>
+                                    <div class="portfolio-links">
+                                        <a href="#" class="btn-portfolio" aria-label="Ver projeto">
+                                            <i class="bi bi-eye"></i>
+                                        </a>
+                                        <a href="#" class="btn-portfolio" aria-label="Ver código">
+                                            <i class="bi bi-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="portfolio-image">
+                            <img src="images/projeto-site.jpg" alt="Site Estático Responsivo" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-content">
+                                    <h3>Site Estático Responsivo</h3>
+                                    <p>Desenvolvimento de site estático moderno e responsivo utilizando HTML5, CSS3, JavaScript e Bootstrap.</p>
+                                    <div class="portfolio-tech">
+                                        <span>HTML5</span>
+                                        <span>CSS3</span>
+                                        <span>JavaScript</span>
+                                        <span>Bootstrap</span>
+                                    </div>
+                                    <div class="portfolio-links">
+                                        <a href="#" class="btn-portfolio" aria-label="Ver projeto">
+                                            <i class="bi bi-eye"></i>
+                                        </a>
+                                        <a href="#" class="btn-portfolio" aria-label="Ver código">
+                                            <i class="bi bi-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="portfolio-image">
+                            <img src="images/projeto-totem.jpg" alt="Sistema Totem Acadêmico" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-content">
+                                    <h3>Sistema Totem (Projeto Acadêmico)</h3>
+                                    <p>Desenvolvimento de sistema para totem interativo utilizando Java e SQL, projeto acadêmico da UNIP.</p>
+                                    <div class="portfolio-tech">
+                                        <span>Java</span>
+                                        <span>SQL</span>
+                                        <span>Interface Gráfica</span>
+                                    </div>
+                                    <div class="portfolio-links">
+                                        <a href="#" class="btn-portfolio" aria-label="Ver projeto">
+                                            <i class="bi bi-eye"></i> 
+                                        </a>
+                                        <a href="#" class="btn-portfolio" aria-label="Ver código">  
+                                            <i class="bi bi-github"></i>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        </header>
-
-        <section id="sobre" class="py-5">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-8 offset-md-2 text-center">
-                        <h2 class="h4">Olá, eu sou o Lucas!</h2>
-                        <p>Estudante do 6º semestre de Ciência da Computação (UNIP), buscando atuar ativamente na área de programação.</p>
-                        <p>Tenho experiência prática em desenvolvimento full stack, utilizando Java, Spring Boot, SQL Server, HTML, CSS, JavaScript e Bootstrap. Atuo em projetos reais, desde a modelagem de dados até a implementação de funcionalidades e implantação em produção.</p>
-                        <p>Com um perfil dinâmico, tenho facilidade para identificar problemas, propor soluções práticas e trabalhar em equipe. Quando não estou codificando, gosto de explorar novas tecnologias e aprimorar boas práticas de desenvolvimento.</p>
-                    </div>
+        </section>
+        
+        <section id="contato" class="contato">
+            <div class="interface">
+                <h2 class="titulo">FALE <span class="accent">COMIGO</span><span class="dot">.</span></h2>
+                <p class="lead text-center">Vamos criar algo incrível juntos. Entre em contato para discutir seu projeto ou oportunidade.</p>
+                <div class="flex">
+                    <form action="">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" name="nome" placeholder="Seu Nome Completo" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" name="email" placeholder="Seu E-mail" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" name="assunto" placeholder="Assunto" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" name="mensagem" rows="6" placeholder="Sua Mensagem" required></textarea>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">ENVIAR</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
+    </main>
 
-        <section id="competencias" class="py-5 bg-light">
-            <div class="container">
-                <h2 class="text-center mb-5">Minhas Competências</h2>
-                <div class="row text-center">
-                    <div class="col-md-6 mb-4">
-                        <div class="card h-100 shadow-sm">
-                            <div class="card-body">
-                                <h4 class="card-title mb-3">Tecnologias</h4>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item"><i class="fa-brands fa-java me-2"></i> Java SpringBoot | Thymeleaf | SQL Server</li>
-                                    <li class="list-group-item"><i class="fa-brands fa-html5 me-2"></i> HTML | CSS | Bootstrap | JavaScript</li>
-                                    <li class="list-group-item"><i class="fa-solid fa-database me-2"></i> SQL Server | MySQL</li>
-                                    <li class="list-group-item"><i class="fa-brands fa-git-alt me-2"></i> Git | GitHub</li>
-                                </ul>
-                            </div>
-                        </div>
+        <footer>
+        <div class="interface">
+            <div class="line-footer">
+                <div class="flex">
+                    <div class="logo-footer">
+                        <a href="#inicio">
+                            <span class="logo-text">Lucas<span class="accent">Sales</span></span>
+                        </a>
                     </div>
-                    <div class="col-md-6 mb-4">
-                        <div class="card h-100 shadow-sm">
-                            <div class="card-body">
-                                <h4 class="card-title mb-3">Habilidades</h4>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item"><i class="fa-solid fa-users me-2"></i> Comunicação e trabalho em equipe</li>
-                                    <li class="list-group-item"><i class="fa-solid fa-brain me-2"></i> Capacidade de adaptação</li>
-                                    <li class="list-group-item"><i class="fa-solid fa-lightbulb me-2"></i> Foco no usuário e solução de problemas</li>
-                                    <li class="list-group-item"><i class="fa-solid fa-globe me-2"></i> Inglês (Fluente)</li>
-                                </ul>
-                            </div>
-                        </div>
+                    <div class="btn-social-footer">
+                        <a href="https://www.linkedin.com/in/lucas-salees/" target="_blank" rel="noopener" aria-label="LinkedIn do Lucas">
+                            <button><i class="bi bi-linkedin"></i></button>
+                        </a>
+                        <a href="https://github.com/lucasSalees" target="_blank" rel="noopener" aria-label="GitHub do Lucas">
+                            <button><i class="bi bi-github"></i></button>
+                        </a>
+                        <a href="mailto:contactlucassales@gmail.com" aria-label="Email do Lucas">
+                            <button><i class="bi bi-envelope"></i></button>
+                        </a>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section id="projetos" class="py-5">
-            <div class="container">
-                <h2 class="text-center mb-5">Meus Projetos</h2>
-                <div class="row justify-content-center">
-                    <div class="col-md-6 col-lg-4 mb-4">
-                        <div class="card h-100 shadow-sm projeto-card" data-bs-toggle="modal" data-bs-target="#contadorModal">
-                            <img src="assets/images/contador-amor.jpg" class="card-img-top" alt="Contador de Amor">
-                            <div class="card-body text-center d-flex flex-column">
-                                <h5 class="card-title">Contador de Amor</h5>
-                                <p class="card-text text-muted mt-auto">Um projeto pessoal feito para a minha namorada.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-4">
-                        <div class="card h-100 shadow-sm projeto-card" data-bs-toggle="modal" data-bs-target="#sistemaGestaoModal">
-                            <img src="assets/images/sistema-gestao.jpg" class="card-img-top" alt="Sistema de Gestão">
-                            <div class="card-body text-center d-flex flex-column">
-                                <h5 class="card-title">Sistema de Gestão (Full-Stack)</h5>
-                                <p class="card-text text-muted mt-auto">Desenvolvimento e implementação de um sistema web completo.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-4">
-                        <div class="card h-100 shadow-sm projeto-card" data-bs-toggle="modal" data-bs-target="#totemModal">
-                            <img src="assets/images/totem.jpg" class="card-img-top" alt="Totem Acadêmico">
-                            <div class="card-body text-center d-flex flex-column">
-                                <h5 class="card-title">Projetos Acadêmicos</h5>
-                                <p class="card-text text-muted mt-auto">Desenvolvimento de um totem e sistema de análise.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contato" class="py-5 bg-dark text-white">
-            <div class="container text-center">
-                <h2 class="mb-4">Vamos conversar?</h2>
-                <p class="lead">Estou sempre aberto a novas oportunidades e desafios.</p>
-                <div class="d-flex justify-content-center gap-3 mt-4">
-                    <a href="https://www.linkedin.com/in/lucas-salees/" target="_blank" class="btn btn-outline-light"><i class="fab fa-linkedin fa-2x"></i></a>
-                    <a href="https://github.com/lucasSalees" target="_blank" class="btn btn-outline-light"><i class="fab fa-github fa-2x"></i></a>
-                    <a href="mailto:contactlucassales@gmail.com" target="_blank" class="btn btn-outline-light"><i class="fas fa-envelope fa-2x"></i></a>
-                </div>
-            </div>
-        </section>
-
-        <footer class="bg-primary text-white text-center py-3">
-            <p class="m-0">&copy; 2025 Lucas Sales. Todos os direitos reservados.</p>
-        </footer>
-
-                <div class="modal fade" id="contadorModal" tabindex="-1" aria-labelledby="contadorModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="contadorModalLabel">Contador de Amor</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body text-center">
-                        <img src="assets/images/contador-amor.jpg" class="img-fluid mb-3" alt="Contador de Amor">
-                        <h4>Descrição do Projeto</h4>
-                        <p>Este site simples e intuitivo calcula o tempo (em anos, meses, dias, horas, minutos e segundos) desde o início do meu relacionamento, demonstrando minhas habilidades em HTML, CSS e JavaScript. É um projeto pessoal que demonstra minhas habilidades em front-end.</p>
-                        <p><strong>Tecnologias:</strong> HTML, CSS, JavaScript, Bootstrap.</p>
-                        <p>
-                            <a href="https://contador-de-amor.netlify.app/" class="btn btn-primary me-2" target="_blank">Ver Projeto</a>
-                            <a href="seu_link_github_aqui" class="btn btn-secondary" target="_blank">Ver Código</a>
-                        </p>
-                    </div>
-                </div>
+            <div class="line-footer borda">
+                <p>&copy; 2024 Lucas Sales. Todos os direitos reservados.</p>
             </div>
         </div>
+    </footer>
 
-        <div class="modal fade" id="sistemaGestaoModal" tabindex="-1" aria-labelledby="sistemaGestaoModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="sistemaGestaoModalLabel">Sistema de Gestão (Full-Stack)</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body text-center">
-                        <img src="assets/images/sistema-gestao.jpg" class="img-fluid mb-3" alt="Sistema de Gestão">
-                        <h4>Descrição do Projeto</h4>
-                        <p>Desenvolvimento e implementação, sob demanda, de um sistema web completo para a gestão de estoque e relatórios. Demonstração de conhecimentos técnicos em back-end com Java e Spring Boot, e front-end com HTML, CSS, Bootstrap e JavaScript. A modelagem e administração do banco de dados foram realizadas com SQL Server.</p>
-                        <p><strong>Tecnologias:</strong> Java, Spring Boot, HTML, CSS, Bootstrap, JavaScript, SQL Server.</p>
-                        <p>
-                            <a href="#" class="btn btn-primary me-2" target="_blank">Ver Projeto</a>
-                            <a href="seu_link_github_aqui" class="btn btn-secondary" target="_blank">Ver Código</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="totemModal" tabindex="-1" aria-labelledby="totemModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="totemModalLabel">Projetos Acadêmicos</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body text-center">
-                        <img src="assets/images/totem.jpg" class="img-fluid mb-3" alt="Totem Acadêmico">
-                        <h4>Descrição do Projeto</h4>
-                        <p>Participação no desenvolvimento de um sistema para análise de temperatura, umidade e precipitação, e de um totem.</p>
-                        <p><strong>Tecnologias:</strong> Java e SQL.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>
