@@ -229,7 +229,7 @@ body {
     font-weight: 600;
 }
 
-.terminal-header {
+.terminal-header-credit {
     background: var(--color-pink);
     color: var(--bg-primary);
     padding: 0.75rem 1rem;
