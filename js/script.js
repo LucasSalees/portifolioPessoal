@@ -221,3 +221,17 @@ letters.forEach((letter, index) => {
         }, 200);
     });
 });
+
+// Fechar o menu responsivo quando clicar fora dele
+document.addEventListener('click', function(event) {
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.getElementById('navbarNav');
+
+    const isClickInsideNavbar = navbarCollapse.contains(event.target) || navbarToggler.contains(event.target);
+
+    // Verifica se o menu está aberto e se o clique foi fora dele
+    if (navbarCollapse.classList.contains('show') && !isClickInsideNavbar) {
+        // Simula um clique no botão para fechar o menu
+        navbarToggler.click();
+    }
+});
