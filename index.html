@@ -3,175 +3,418 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifólio</title>
+    <title>LUCAS SALES | DEVELOPER</title>
+    
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/components.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-    <canvas id="galaxy"></canvas>
-
-    <nav class="custom-navbar">
-        <div class="navbar-container">
-            <div class="navbar-left">
-                <button id="sidebar-toggle" class="menu-button" aria-label="Menu">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
+    <canvas id="neon-background"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg neon-nav fixed-top">
+        <div class="container">
+            <a class="navbar-brand neon-text" href="#home">LS</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link neon-link" href="#home">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link neon-link" href="#about">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link neon-link" href="#skills">SKILLS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link neon-link" href="#projects">PROJECTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link neon-link" href="#contact">CONTACT</a>
+                    </li>
+                </ul>
             </div>
-        
-            <div class="navbar-center">
-                <div class="logo-wrapper">
-                    <a href="#" class="logo-link" rel="noopener noreferrer"></a>
-                </div>
-            </div>
-        
-            <div class="navbar-right"></div>
         </div>
     </nav>
 
-    <aside id="sidebar" class="sidebar sidebar-closed">
-        <div class="sidebar-header">
-            <h2 class="sidebar-title">Menu de Navegação</h2>
-        </div>
-        <div class="sidebar-menu">
-            <nav>
-                <ul class="sidebar-nav">
-                    <li>
-                        <a href="index.html" class="sidebar-item active">
-                            <i class="fa-solid fa-user"></i>
-                            Sobre mim
-                        </a>
-                    </li>
-                    <li>
-                        <a href="projects.html" class="sidebar-item active">
-                            <i class="fa-solid fa-globe"></i>
-                            Projetos
-                        </a>
-                    </li>
-                    <li>
-                        <a href="curriculum.html" class="sidebar-item active">
-                            <i class="fa-solid fa-paperclip"></i>
-                            Curriculo
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </aside>
-
-    <div id="sidebar-overlay" class="sidebar-overlay hidden"></div>
-
-   <main id="main-content" class="main-content">
+    <!-- Hero Section -->
+    <section id="home" class="hero-section min-vh-100 d-flex align-items-center">
         <div class="container">
-            <div class="card p-4 shadow-sm">
-
-                <section class="hero-container">
-                    <div class="hero">
-                        <div class="hero-right">
-                            <img src="images/lucas.png" alt="Foto de Lucas Sales" class="profile-pic">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-2 order-lg-1">
+                    <div class="name-display d-flex justify-content-center justify-content-lg-start mb-4">
+                        <div class="name-vertical me-4">
+                            <span class="letter d-block">L</span>
+                            <span class="letter d-block">U</span>
+                            <span class="letter d-block">C</span>
+                            <span class="letter d-block">A</span>
+                            <span class="letter d-block">S</span>
                         </div>
-                        <div class="hero-left">
-                            <p class="greeting">Olá, Bem-vindo!</p>
-                            <h1 class="name-user">Meu nome é Lucas Sales.</h1>
-                            <p class="typing">
-                                <span id="typing-text"></span>
-                                <span class="cursor">|</span>
-                            </p>
-                            <p class="intro">Este é o meu portfólio.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <hr class="my-4">
-
-                <section class="mb-4 sobre-mim">
-                    <h2 class="card-title">Sobre Mim</h2>
-                        <p class="card-text">
-                            Meu nome é <span class="keyword">Lucas Sales</span>, tenho 24 anos e moro em <span class="keyword">Votorantim, São Paulo</span>. 
-                            Atualmente, estou no <span class="keyword">6º semestre de Ciência da Computação</span>.
-                        </p>
-                        <p class="card-text">
-                            Possuo sólida experiência em <span class="keyword">Java</span> e <span class="keyword">Spring Boot</span>, com projetos 
-                            <span class="keyword">Full-stack</span> em funcionamento na empresa onde atuo. Desde então, tenho buscado me aperfeiçoar constantemente, 
-                            tanto tecnicamente quanto no trabalho em equipe e na gestão de projetos. Meu principal interesse é na criação de produtos e aplicações robustas, 
-                            sempre aprimorando minhas habilidades tanto no <span class="keyword">back-end</span> quanto no <span class="keyword">front-end</span>, explorando tecnologias como 
-                            <span class="keyword">Spring</span>, <span class="keyword">AWS</span>, <span class="keyword">HTML</span>, <span class="keyword">CSS</span>, 
-                            <span class="keyword">JavaScript</span>, <span class="keyword">Bootstrap</span> e bancos de dados relacionais como 
-                            <span class="keyword">MySQL</span> e <span class="keyword">SQL Server</span>.
-                        </p>
-                        <p class="card-text">
-                            Atualmente, atuo como <span class="keyword">Desenvolvedor Multiplataforma</span> na <span class="keyword">Input Center</span>, onde participo do desenvolvimento 
-                            de sistemas utilizando <span class="keyword">Java</span> e <span class="keyword">Spring Boot</span>, criação de interfaces responsivas, 
-                            controle de versão com <span class="keyword">Git</span>, e estruturação de projetos com padrão <span class="keyword">MVC</span>, incluindo aplicações web e projetos de 
-                            controle de estoque aplicando conceitos de <span class="keyword">CRUD</span>.
-                        </p>
-                        <p class="card-text">
-                            Meu objetivo vai além de ser apenas um profissional de tecnologia; quero entregar valor, liderar com empatia e contribuir ativamente para a construção de soluções 
-                            inovadoras que impactem positivamente a vida das pessoas.
-                        </p>
-                </section>
-  
-                <section class="habilidades-full">
-                    <div class="container">
-                        <h2 class="card-title">Habilidades</h2>
-                        <div class="skillset-full">
-                            <div class="skill-card">
-                                <span class="icon">☕</span>
-                                <span class="name">Java</span>
-                            </div>
-                            <div class="skill-card">
-                                <span class="icon">🍃</span>
-                                <span class="name">Spring</span>
-                            </div>
-                            <div class="skill-card">
-                                <span class="icon">⚛️</span>
-                                <span class="name">JavaScript</span>
-                            </div>
-                            <div class="skill-card">
-                                <span class="icon">🔷</span>
-                                <span class="name">TypeScript</span>
-                            </div>
-                            <div class="skill-card">
-                                <span class="icon">🐘</span>
-                                <span class="name">PostgreSQL</span>
-                            </div>
-                            <div class="skill-card">
-                                <span class="icon">🐬</span>
-                                <span class="name">MySQL</span>
-                            </div>
-                            <div class="skill-card">
-                                <span class="icon">📝</span>
-                                <span class="name">Git</span>
-                            </div>
-                            <div class="skill-card">
-                                <span class="icon">🎨</span>
-                                <span class="name">HTML/CSS</span>
-                            </div>
-                            <div class="skill-card">
-                                <span class="icon">🌐</span>
-                                <span class="name">Inglês</span>
-                            </div>
+                        <div class="name-vertical">
+                            <span class="letter d-block">S</span>
+                            <span class="letter d-block">A</span>
+                            <span class="letter d-block">L</span>
+                            <span class="letter d-block">E</span>
+                            <span class="letter d-block">S</span>
                         </div>
                     </div>
-                </section>
+                    <div class="hero-subtitle text-center text-lg-start">
+                        <span class="typing-text" id="typing-text"></span>
+                        <span class="cursor-neon">|</span>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2 text-center mb-4 mb-lg-0">
+                    <div class="profile-container mx-auto">
+                        <div class="profile-glow"></div>
+                        <img src="images/lucas.png" alt="Lucas Sales" class="profile-image img-fluid">
+                    </div>
+                </div>
             </div>
         </div>
-    </main>
-    
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-left">
-                <p>
-                    <p> &copy; Todos os direitos reservados</p>
-                </p>
+        <div class="scroll-indicator position-absolute bottom-0 start-50 translate-middle-x mb-4">
+            <div class="scroll-arrow mx-auto"></div>
+            <span class="scroll-text d-block text-center mt-2">SCROLL_DOWN</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section min-vh-100 d-flex align-items-center py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title neon-text text-center mb-5">ABOUT_ME.exe</h2>
+                </div>
+                <div class="col-lg-10 mx-auto">
+                    <div class="about-terminal">
+                        <div class="terminal-header d-flex justify-content-between align-items-center">
+                            <span class="terminal-title">lucas_sales_info.txt</span>
+                            <div class="terminal-controls d-flex">
+                                <span class="control minimize me-2"></span>
+                                <span class="control maximize me-2"></span>
+                                <span class="control close"></span>
+                            </div>
+                        </div>
+                        <div class="terminal-body p-4">
+                            <div class="row">
+                                <div class="col-12">
+                                    <p class="terminal-line mb-3">
+                                        <span class="prompt-info">></span> Meu nome é <span class="highlight">Lucas Sales</span>, tenho 24 anos e moro em <span class="highlight">Votorantim, São Paulo</span>.
+                                    </p>
+                                    <p class="terminal-line mb-3">
+                                        <span class="prompt-info">></span> Atualmente, estou no <span class="highlight">6º semestre de Ciência da Computação</span>.
+                                    </p>
+                                    <p class="terminal-line mb-3">
+                                        <span class="prompt-info">></span> Possuo sólida experiência em <span class="highlight">Java</span> e <span class="highlight">Spring Boot</span>, com projetos <span class="highlight">Full-stack</span> em funcionamento.
+                                    </p>
+                                    <p class="terminal-line mb-3">
+                                        <span class="prompt-info">></span> Atuo como <span class="highlight">Desenvolvedor Multiplataforma</span> na <span class="highlight">Input Center</span>.
+                                    </p>
+                                    <p class="terminal-line mb-0">
+                                        <span class="prompt-info">></span> Meu objetivo é entregar valor, liderar com empatia e contribuir para soluções inovadoras.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section min-vh-100 d-flex align-items-center py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title neon-text text-center mb-5">TECH_STACK.json</h2>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6 col-xl-3">
+                    <div class="skill-category h-100">
+                        <h3 class="category-title text-center mb-4">BACKEND</h3>
+                        <div class="skill-chips">
+                            <div class="skill-chip d-flex align-items-center mb-3">
+                                <span class="skill-icon me-3">☕</span>
+                                <span class="skill-name flex-grow-1">Java</span>
+                                <div class="skill-points" data-level="4">
+                                    <span class="point"></span>
+                                    <span class="point"></span>
+                                    <span class="point"></span>
+                                    <span class="point"></span>
+                                    <span class="point"></span>
+                                </div>
+                            </div>
+                            <div class="skill-chip d-flex align-items-center">
+                                <span class="skill-icon me-3">🍃</span>
+                                <span class="skill-name flex-grow-1">Spring Boot</span>
+                                <div class="skill-points" data-level="3">
+                                    <span class="point"></span>
+                                    <span class="point"></span>
+                                    <span class="point"></span>
+                                    <span class="point"></span>
+                                    <span class="point"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div class="col-lg-6 col-xl-3">
+                    <div class="skill-category h-100">
+                        <h3 class="category-title text-center mb-4">FRONTEND</h3>
+                        <div class="skill-chips">
+                            <div class="skill-chip d-flex align-items-center mb-3">
+                                <span class="skill-icon me-3">⚛️</span>
+                                <span class="skill-name flex-grow-1">JavaScript</span>
+                                <div class="skill-points" data-level="3">
+                                    <span class="point"></span>
+                                    <span class="point"></span>
+                                    <span class="point"></span>
+                                    <span class="point"></span>
+                                    <span class="point"></span>
+                                </div>
+                            </div>
+                            <div class="skill-chip d-flex align-items-center">
+                                <span class="skill-icon me-3">🎨</span>
+                                <span class="skill-name flex-grow-1">HTML/CSS</span>
+                                <div class="skill-points" data-level="5">
+                                    <span class="point"></span>
+                                    <span class="point"></span>
+                                    <span class="point"></span>
+                                    <span class="point"></span>
+                                    <span class="point"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 col-xl-3">
+                    <div class="skill-category h-100">
+                        <h3 class="category-title text-center mb-4">DATABASE</h3>
+                        <div class="skill-chips">
+                            <div class="skill-chip d-flex align-items-center mb-3">
+                                <span class="skill-icon me-3">🐘</span>
+                                <span class="skill-name flex-grow-1">PostgreSQL</span>
+                                <div class="skill-points" data-level="4">
+                                    <span class="point"></span>
+                                    <span class="point"></span>
+                                    <span class="point"></span>
+                                    <span class="point"></span>
+                                    <span class="point"></span>
+                                </div>
+                            </div>
+                            <div class="skill-chip d-flex align-items-center">
+                                <span class="skill-icon me-3">🐬</span>
+                                <span class="skill-name flex-grow-1">MySQL</span>
+                                <div class="skill-points" data-level="4">
+                                    <span class="point"></span>
+                                    <span class="point"></span>
+                                    <span class="point"></span>
+                                    <span class="point"></span>
+                                    <span class="point"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 col-xl-3">
+                    <div class="skill-category h-100">
+                        <h3 class="category-title text-center mb-4">TOOLS</h3>
+                        <div class="skill-chips">
+                            <div class="skill-chip d-flex align-items-center mb-3">
+                                <span class="skill-icon me-3">📝</span>
+                                <span class="skill-name flex-grow-1">Git</span>
+                                <div class="skill-points" data-level="5">
+                                    <span class="point"></span>
+                                    <span class="point"></span>
+                                    <span class="point"></span>
+                                    <span class="point"></span>
+                                    <span class="point"></span>
+                                </div>
+                            </div>
+                            <div class="skill-chip d-flex align-items-center">
+                                <span class="skill-icon me-3">🔷</span>
+                                <span class="skill-name flex-grow-1">TypeScript</span>
+                                <div class="skill-points" data-level="3">
+                                    <span class="point"></span>
+                                    <span class="point"></span>
+                                    <span class="point"></span>
+                                    <span class="point"></span>
+                                    <span class="point"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section min-vh-100 d-flex align-items-center py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title neon-text text-center mb-5">PORTFOLIO_SHOWCASE</h2>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="project-card h-100">
+                        <div class="project-header d-flex justify-content-between align-items-center mb-3">
+                            <h3 class="project-title mb-0">Sistema de Controle de Estoque</h3>
+                            <div class="project-status">ACTIVE</div>
+                        </div>
+                        <div class="project-description mb-4">
+                            Sistema completo desenvolvido com Java e Spring Boot para controle de estoque, aplicando conceitos de CRUD e padrão MVC.
+                        </div>
+                        <div class="project-tech mb-4">
+                            <span class="tech-tag me-2 mb-2">Java</span>
+                            <span class="tech-tag me-2 mb-2">Spring Boot</span>
+                            <span class="tech-tag me-2 mb-2">MySQL</span>
+                        </div>
+                        <div class="project-links d-flex gap-2 mt-auto">
+                            <a href="#" class="project-link flex-fill text-center">VIEW_CODE</a>
+                            <a href="#" class="project-link flex-fill text-center">LIVE_DEMO</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="project-card h-100">
+                        <div class="project-header d-flex justify-content-between align-items-center mb-3">
+                            <h3 class="project-title mb-0">Aplicação Web Full-Stack</h3>
+                            <div class="project-status">ACTIVE</div>
+                        </div>
+                        <div class="project-description mb-4">
+                            Aplicação web completa com interface responsiva, integração com APIs e banco de dados relacional.
+                        </div>
+                        <div class="project-tech mb-4">
+                            <span class="tech-tag me-2 mb-2">JavaScript</span>
+                            <span class="tech-tag me-2 mb-2">HTML/CSS</span>
+                            <span class="tech-tag me-2 mb-2">Bootstrap</span>
+                        </div>
+                        <div class="project-links d-flex gap-2 mt-auto">
+                            <a href="#" class="project-link flex-fill text-center">VIEW_CODE</a>
+                            <a href="#" class="project-link flex-fill text-center">LIVE_DEMO</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="project-card h-100">
+                        <div class="project-header d-flex justify-content-between align-items-center mb-3">
+                            <h3 class="project-title mb-0">Sistema de Gestão</h3>
+                            <div class="project-status project-status-dev">DEVELOPMENT</div>
+                        </div>
+                        <div class="project-description mb-4">
+                            Sistema de gestão empresarial com controle de usuários, relatórios e dashboard interativo.
+                        </div>
+                        <div class="project-tech mb-4">
+                            <span class="tech-tag me-2 mb-2">Spring</span>
+                            <span class="tech-tag me-2 mb-2">PostgreSQL</span>
+                            <span class="tech-tag me-2 mb-2">AWS</span>
+                        </div>
+                        <div class="project-links d-flex gap-2 mt-auto">
+                            <a href="#" class="project-link flex-fill text-center">VIEW_CODE</a>
+                            <a href="#" class="project-link project-link-disabled flex-fill text-center">COMING_SOON</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section min-vh-100 d-flex align-items-center py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title neon-text text-center mb-5">CONTACT_PROTOCOL</h2>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="contact-terminal">
+                        <div class="terminal-header d-flex justify-content-between align-items-center">
+                            <span class="terminal-title">contact_info.sys</span>
+                        </div>
+                        <div class="terminal-body p-4">
+                            <p class="terminal-line mb-3">
+                                <span class="prompt">></span> LOCATION: <span class="highlight">Votorantim, São Paulo</span>
+                            </p>
+                            <p class="terminal-line mb-3">
+                                <span class="prompt">></span> STATUS: <span class="highlight">Available for opportunities</span>
+                            </p>
+                            <p class="terminal-line mb-0">
+                                <span class="prompt">></span> SPECIALIZATION: <span class="highlight">Full-Stack Development</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-links d-grid gap-3">
+                        <a href="#" class="contact-button text-decoration-none">
+                            <i class="fas fa-envelope me-2"></i>
+                            <span class="button-text">EMAIL_ME</span>
+                            <div class="button-glow"></div>
+                        </a>
+                        <a href="#" class="contact-button text-decoration-none">
+                            <i class="fab fa-linkedin me-2"></i>
+                            <span class="button-text">LINKEDIN</span>
+                            <div class="button-glow"></div>
+                        </a>
+                        <a href="#" class="contact-button text-decoration-none">
+                            <i class="fab fa-github me-2"></i>
+                            <span class="button-text">GITHUB</span>
+                            <div class="button-glow"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer-content text-center">
+                        <p class="footer-text mb-0">
+                            <span class="timestamp" id="timestamp"></span> | 
+                            LUCAS_SALES.DEV © 2024 | 
+                            ALL_RIGHTS_RESERVED
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
-   
-    <script src="js/components.js"></script>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
 </body>
 </html>
+
