@@ -115,10 +115,11 @@ ul {
 }
 
 .card-title {
-    font-size: 1.50rem;   /* maior que o padrão */
-    font-weight: 700;     /* mais destaque */
+    font-size: 1.50rem;
+    font-weight: 700;
     margin-bottom: 1rem;
     color: var(--color-medium-red);
+    text-align: center; /* Adicionado para centralizar o texto */
 }
 
 .card-text {
@@ -260,25 +261,31 @@ ul {
     }
 }
 
+/* Centraliza e alinha o conteúdo da seção Hero */
+.hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+}
+
 .hero {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 60px 50px;
-    /* background-color: #1a1a1a; */
+    flex-direction: column;
+    align-items: center; /* Centraliza a foto e o texto */
+    max-width: 900px;
+    width: 100%;
+    text-align: center; /* Centraliza o texto dentro da coluna */
     color: #f5f5f5;
-    flex-wrap: wrap;
 }
 
 .hero-left {
-    max-width: 600px;
-    order: 2; /* para mobile, texto aparece depois da imagem */
+    order: 2; /* Para mobile, o texto aparece depois da imagem */
+    margin-top: 2rem;
 }
 
 .hero-right {
-    max-width: 300px;
-    order: 1; /* para mobile, imagem aparece antes do texto */
-    margin-bottom: 20px;
+    order: 1; /* Para mobile, a imagem aparece antes do texto */
 }
 
 .greeting {
@@ -297,7 +304,6 @@ ul {
     font-weight: 700;
     margin-bottom: 0.5rem;
 }
-
 
 .typing {
     font-size: 1.2rem;
@@ -344,17 +350,44 @@ ul {
     transform: translateY(-3px);
 }
 
-/* Responsividade */
-@media (max-width: 992px) {
+.sobre-mim {
+    max-width: 1000px; /* Define uma largura máxima para o bloco de texto */
+    margin: 0 auto; /* Centraliza o bloco na página */
+    padding: 0 1rem; /* Adiciona um pequeno padding nas laterais para telas pequenas */
+}
+
+.sobre-mim p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #f5f5f5;
+    text-align: justify; /* Mantém o texto justificado */
+}
+
+/* Atualize as classes existentes */
+
+.habilidades-full .container {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Para telas maiores, o layout muda para lado a lado */
+@media (min-width: 992px) {
     .hero {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: row; /* Volta para a direção de linha */
+        justify-content: center;
+        text-align: left; /* O texto volta a ser alinhado à esquerda */
+        gap: 4rem; /* Adiciona espaçamento entre a foto e o texto */
     }
-    .hero-left, .hero-right {
-        order: unset;
+    .hero-left {
+        order: unset; /* Reverte a ordem para o padrão */
+        margin-top: 0;
     }
     .hero-right {
-        margin-bottom: 30px;
+        order: unset;
     }
 }
 
@@ -369,6 +402,3 @@ ul {
         font-size: 1rem;
     }
 }
-
-
-

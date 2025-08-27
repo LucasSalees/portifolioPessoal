@@ -17,17 +17,18 @@
     <nav class="custom-navbar">
         <div class="navbar-container">
             <div class="navbar-left">
-                
                 <button id="sidebar-toggle" class="menu-button" aria-label="Menu">
                     <i class="fa-solid fa-bars"></i>
                 </button>
-
-                <!-- Logo junto dos botões -->
+            </div>
+        
+            <div class="navbar-center">
                 <div class="logo-wrapper">
                     <a href="#" class="logo-link" rel="noopener noreferrer"></a>
-                    <span class="logo-text">Lucas Sales</span>
                 </div>
             </div>
+        
+            <div class="navbar-right"></div>
         </div>
     </nav>
 
@@ -39,15 +40,21 @@
             <nav>
                 <ul class="sidebar-nav">
                     <li>
-                        <a href="home.html" class="sidebar-item active">
-                            <i class="fa-solid fa-house-chimney-crack"></i>
-                            Página inicial
+                        <a href="about.html" class="sidebar-item active">
+                            <i class="fa-solid fa-user"></i>
+                            Sobre mim
                         </a>
                     </li>
                     <li>
                         <a href="projects.html" class="sidebar-item active">
                             <i class="fa-solid fa-globe"></i>
                             Projetos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="curriculum.html" class="sidebar-item active">
+                            <i class="fa-solid fa-paperclip"></i>
+                            Curriculo
                         </a>
                     </li>
                 </ul>
@@ -61,25 +68,27 @@
         <div class="container">
             <div class="card p-4 shadow-sm">
 
-                <section class="hero">
-                    <div class="hero-right">
-                        <img src="images/lucas.png" alt="Foto de Lucas Sales" class="profile-pic">
-                    </div>
-                    <div class="hero-left">
-                        <p class="greeting">Bem-vindo! 👋🏽</p>
-                        <h1 class="name-user">Meu nome é Lucas Sales.</h1>
-                        <p class="typing">
-                            <span id="typing-text"></span>
-                            <span class="cursor">|</span>
-                        </p>
-                        <p class="intro">Este é o meu portfólio.</p>
+                <section class="hero-container">
+                    <div class="hero">
+                        <div class="hero-right">
+                            <img src="images/lucas.png" alt="Foto de Lucas Sales" class="profile-pic">
+                        </div>
+                        <div class="hero-left">
+                            <p class="greeting">Olá, Bem-vindo!</p>
+                            <h1 class="name-user">Meu nome é Lucas Sales.</h1>
+                            <p class="typing">
+                                <span id="typing-text"></span>
+                                <span class="cursor">|</span>
+                            </p>
+                            <p class="intro">Este é o meu portfólio.</p>
+                        </div>
                     </div>
                 </section>
 
                 <hr class="my-4">
 
                 <section class="mb-4 sobre-mim">
-                        <h2 class="card-title">Sobre Mim</h2>
+                    <h2 class="card-title">Sobre Mim</h2>
                         <p class="card-text">
                             Meu nome é <span class="keyword">Lucas Sales</span>, tenho 24 anos e moro em <span class="keyword">Votorantim, São Paulo</span>. 
                             Atualmente, estou no <span class="keyword">6º semestre de Ciência da Computação</span>.
@@ -104,52 +113,50 @@
                             inovadoras que impactem positivamente a vida das pessoas.
                         </p>
                 </section>
-
-                <hr class="my-4">
-                    <section class="habilidades-full">
-                        <div class="container">
-                            <h2 class="card-title">Habilidades</h2>
-                            <div class="skillset-full">
-                                <div class="skill-card">
-                                    <span class="icon">☕</span>
-                                    <span class="name">Java</span>
-                                </div>
-                                <div class="skill-card">
-                                    <span class="icon">🍃</span>
-                                    <span class="name">Spring</span>
-                                </div>
-                                <div class="skill-card">
-                                    <span class="icon">⚛️</span>
-                                    <span class="name">JavaScript</span>
-                                </div>
-                                <div class="skill-card">
-                                    <span class="icon">🔷</span>
-                                    <span class="name">TypeScript</span>
-                                </div>
-                                <div class="skill-card">
-                                    <span class="icon">🐘</span>
-                                    <span class="name">PostgreSQL</span>
-                                </div>
-                                <div class="skill-card">
-                                    <span class="icon">🐬</span>
-                                    <span class="name">MySQL</span>
-                                </div>
-                                <div class="skill-card">
-                                    <span class="icon">📝</span>
-                                    <span class="name">Git</span>
-                                </div>
-                                <div class="skill-card">
-                                    <span class="icon">🎨</span>
-                                    <span class="name">HTML/CSS</span>
-                                </div>
-                                <div class="skill-card">
-                                    <span class="icon">🌐</span>
-                                    <span class="name">Inglês</span>
-                                </div>
+  
+                <section class="habilidades-full">
+                    <div class="container">
+                        <h2 class="card-title">Habilidades</h2>
+                        <div class="skillset-full">
+                            <div class="skill-card">
+                                <span class="icon">☕</span>
+                                <span class="name">Java</span>
+                            </div>
+                            <div class="skill-card">
+                                <span class="icon">🍃</span>
+                                <span class="name">Spring</span>
+                            </div>
+                            <div class="skill-card">
+                                <span class="icon">⚛️</span>
+                                <span class="name">JavaScript</span>
+                            </div>
+                            <div class="skill-card">
+                                <span class="icon">🔷</span>
+                                <span class="name">TypeScript</span>
+                            </div>
+                            <div class="skill-card">
+                                <span class="icon">🐘</span>
+                                <span class="name">PostgreSQL</span>
+                            </div>
+                            <div class="skill-card">
+                                <span class="icon">🐬</span>
+                                <span class="name">MySQL</span>
+                            </div>
+                            <div class="skill-card">
+                                <span class="icon">📝</span>
+                                <span class="name">Git</span>
+                            </div>
+                            <div class="skill-card">
+                                <span class="icon">🎨</span>
+                                <span class="name">HTML/CSS</span>
+                            </div>
+                            <div class="skill-card">
+                                <span class="icon">🌐</span>
+                                <span class="name">Inglês</span>
                             </div>
                         </div>
-                    </section>
-
+                    </div>
+                </section>
             </div>
         </div>
     </main>
