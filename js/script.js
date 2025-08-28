@@ -1,5 +1,8 @@
+/* ========================================================================== */
+/*                                 Animação de Fundo Neon                     */
+/* ========================================================================== */
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Neon Background Animation
     const canvas = document.getElementById('neon-background');
     const ctx = canvas.getContext('2d');
     
@@ -12,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', resizeCanvas);
     
     const particles = [];
-    const particleCount = 80; // Reduzido um pouco para um look mais limpo
+    const particleCount = 80;
     
     class Particle {
         constructor() {
@@ -21,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
             this.vx = (Math.random() - 0.5) * 0.4;
             this.vy = (Math.random() - 0.5) * 0.4;
             this.size = Math.random() * 1.5 + 1;
-            // A cor agora é predominantemente ciano ou branca para um efeito mais sutil
             this.color = Math.random() > 0.1 ? '#00ffff' : '#ffffff'; 
             this.opacity = Math.random() * 0.4 + 0.1;
         }
@@ -68,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const dy = particle.y - otherParticle.y;
                 const distance = Math.sqrt(dx * dx + dy * dy);
                 
-                if (distance < 120) { // Aumentei um pouco a distância para mais conexões
+                if (distance < 120) {
                     ctx.save();
                     ctx.globalAlpha = (120 - distance) / 120 * 0.15;
                     ctx.strokeStyle = '#00ffff';
@@ -86,17 +88,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     animate();
-    
-    // O restante do seu código JS pode permanecer o mesmo.
-    // Cole o resto do seu script original aqui.
-    // ... (Typing Animation, Navbar Active State, Smooth Scrolling, etc.)
-    
-    // Typing Animation
+
+/* ========================================================================== */
+/*                                 Animação de Digitação                      */
+/* ========================================================================== */
+
     const typingElement = document.getElementById('typing-text');
     const texts = [
-        'DESENVOLVEDOR_JAVA',
-        'SPRING_BOOT_EXPERT',
-        'FULL_STACK_CREATOR',
+        'JAVA_DEVELOPER',
+        'SPRING_BOOT',
+        'FULL_STACK',
         'DATABASE_ARCHITECT',
         'CODE_INNOVATOR'
     ];
@@ -131,8 +132,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if(typingElement) typeText();
 
-    // O resto do seu código JS pode permanecer o mesmo.
-    // ... (código de scroll, observer, etc.)
+/* ========================================================================== */
+/*                                 Navegação e Scroll                         */
+/* ========================================================================== */
+
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('section[id]');
     
@@ -156,6 +159,40 @@ document.addEventListener('DOMContentLoaded', function() {
     
     window.addEventListener('scroll', updateActiveNavLink);
 
+    // Fechar o menu responsivo quando clicar fora dele
+    document.addEventListener('click', function(event) {
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.getElementById('navbarNav');
+
+        const isClickInsideNavbar = navbarCollapse.contains(event.target) || navbarToggler.contains(event.target);
+
+        // Verifica se o menu está aberto e se o clique foi fora dele
+        if (navbarCollapse.classList.contains('show') && !isClickInsideNavbar) {
+            // Simula um clique no botão para fechar o menu
+            navbarToggler.click();
+        }
+    });
+
+    const btn = document.getElementById("btnTop");
+
+    // Mostrar/esconder botão ao rolar
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 200) {
+        btn.classList.add("show"); // aparece
+      } else {
+        btn.classList.remove("show"); // some
+      }
+    });
+
+    // Voltar ao topo suavemente ao clicar
+    btn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+/* ========================================================================== */
+/*                                 Animações e Observadores                   */
+/* ========================================================================== */
+
     // Progress Bar Animation with Intersection Observer
     const skillsSection = document.querySelector('.skills-section');
     const progressBars = document.querySelectorAll('.progress-bar');
@@ -173,18 +210,6 @@ document.addEventListener('DOMContentLoaded', function() {
         skillsObserver.observe(skillsSection);
     }
 
-    // Timestamp Update
-    function updateTimestamp() {
-        const timestampElement = document.getElementById('timestamp');
-        if (timestampElement) {
-            const now = new Date();
-            timestampElement.textContent = now.toLocaleString('pt-BR');
-        }
-    }
-    
-    updateTimestamp();
-    setInterval(updateTimestamp, 1000);
-
     // Intersection Observer for Fade-in Animations
     const fadeElements = document.querySelectorAll('.terminal-line, .skill-category, .project-card');
     
@@ -200,38 +225,42 @@ document.addEventListener('DOMContentLoaded', function() {
         element.classList.add('fade-in');
         fadeObserver.observe(element);
     });
-});
 
-// Glitch Effect for Letters
-const letters = document.querySelectorAll('.letter');
-letters.forEach((letter, index) => {
-    letter.addEventListener('mouseenter', () => {
-        letter.style.animation = 'none';
-        letter.style.transform = `translateX(${Math.random() * 10 - 5}px) translateY(${Math.random() * 10 - 5}px)`;
-        letter.style.textShadow = `
-            ${Math.random() * 10 - 5}px ${Math.random() * 10 - 5}px 0 #ff00ff,
-            ${Math.random() * 10 - 5}px ${Math.random() * 10 - 5}px 0 #00ff00,
-            0 0 20px #00ffff
-        `;
-        
-        setTimeout(() => {
-            letter.style.transform = '';
-            letter.style.textShadow = '';
-            letter.style.animation = '';
-        }, 200);
+/* ========================================================================== */
+/*                                 Outros                                     */
+/* ========================================================================== */
+
+    // Timestamp Update
+    function updateTimestamp() {
+        const timestampElement = document.getElementById('timestamp');
+        if (timestampElement) {
+            const now = new Date();
+            timestampElement.textContent = now.toLocaleString('pt-BR');
+        }
+    }
+    
+    updateTimestamp();
+    setInterval(updateTimestamp, 1000);
+
+    // Glitch Effect for Letters
+    const letters = document.querySelectorAll('.letter');
+    letters.forEach((letter, index) => {
+        letter.addEventListener('mouseenter', () => {
+            letter.style.animation = 'none';
+            letter.style.transform = `translateX(${Math.random() * 10 - 5}px) translateY(${Math.random() * 10 - 5}px)`;
+            letter.style.textShadow = `
+                ${Math.random() * 10 - 5}px ${Math.random() * 10 - 5}px 0 #ff00ff,
+                ${Math.random() * 10 - 5}px ${Math.random() * 10 - 5}px 0 #00ff00,
+                0 0 20px #00ffff
+            `;
+            
+            setTimeout(() => {
+                letter.style.transform = '';
+                letter.style.textShadow = '';
+                letter.style.animation = '';
+            }, 200);
+        });
     });
 });
 
-// Fechar o menu responsivo quando clicar fora dele
-document.addEventListener('click', function(event) {
-    const navbarToggler = document.querySelector('.navbar-toggler');
-    const navbarCollapse = document.getElementById('navbarNav');
 
-    const isClickInsideNavbar = navbarCollapse.contains(event.target) || navbarToggler.contains(event.target);
-
-    // Verifica se o menu está aberto e se o clique foi fora dele
-    if (navbarCollapse.classList.contains('show') && !isClickInsideNavbar) {
-        // Simula um clique no botão para fechar o menu
-        navbarToggler.click();
-    }
-});

@@ -1,4 +1,7 @@
-/* Reset e Variáveis */
+/* ========================================================================== */
+/*                                 Variáveis e Reset                          */
+/* ========================================================================== */
+
 :root {
     /* Cor Neon Principal */
     --neon-primary: #00ffff; /* Ciano */
@@ -15,6 +18,7 @@
     --color-green: #40ff00;
     --color-orange: #ff8000;
     --color-pink: #ff00ff;
+    --color-white: #ffffff;
     
     /* Fontes */
     --font-primary: 'Orbitron', monospace;
@@ -38,7 +42,10 @@ body {
     overflow-x: hidden;
 }
 
-/* Background Canvas */
+/* ========================================================================== */
+/*                                 Background Canvas                          */
+/* ========================================================================== */
+
 #neon-background {
     position: fixed;
     top: 0;
@@ -49,7 +56,10 @@ body {
     pointer-events: none;
 }
 
-/* Utilitários Neon */
+/* ========================================================================== */
+/*                                 Utilitários Neon                           */
+/* ========================================================================== */
+
 .neon-text {
     color: var(--color-yellow);
     text-shadow: 
@@ -76,7 +86,10 @@ body {
     text-shadow: 0 0 10px var(--neon-primary);
 }
 
-/* Navegação */
+/* ========================================================================== */
+/*                                 Navegação                                  */
+/* ========================================================================== */
+
 .neon-nav {
     background: rgba(0, 0, 0, 0.9) !important;
     backdrop-filter: blur(10px);
@@ -102,7 +115,10 @@ body {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%2300ffff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e" );
 }
 
-/* Seção Hero */
+/* ========================================================================== */
+/*                                 Seção Hero                                 */
+/* ========================================================================== */
+
 .hero-section {
     position: relative;
     padding: 6rem 0 4rem;
@@ -205,14 +221,20 @@ body {
     50% { opacity: 1; transform: translateY(10px); }
 }
 
-/* Títulos de Seção */
+/* ========================================================================== */
+/*                                 Títulos de Seção                           */
+/* ========================================================================== */
+
 .section-title {
     font-size: 2.5rem;
     font-family: var(--font-primary);
     letter-spacing: 3px;
 }
 
-/* Seção About */
+/* ========================================================================== */
+/*                                 Seção About                                */
+/* ========================================================================== */
+
 .about-terminal {
     background: rgba(13, 26, 26, 0.5);
     border: 2px solid var(--color-red);
@@ -274,7 +296,10 @@ body {
     padding: 0 4px;
 }
 
-/* Seção Skills */
+/* ========================================================================== */
+/*                                 Seção Skills                               */
+/* ========================================================================== */
+
 .skill-category {
     background: rgba(13, 26, 26, 0.4);
     border: 1px solid var(--color-orange);
@@ -335,8 +360,10 @@ body {
     background-color: var(--color-yellow); /* cor da bolinha preenchida */
 }
 
+/* ========================================================================== */
+/*                                 Seção Projects                             */
+/* ========================================================================== */
 
-/* Seção Projects */
 .project-card {
     background: rgba(255, 0, 191, 0.1);
     border: 2px solid var(--bg-tertiary);
@@ -423,7 +450,10 @@ body {
     box-shadow: none;
 }
 
-/* Seção Contact */
+/* ========================================================================== */
+/*                                 Seção Contact                              */
+/* ========================================================================== */
+
 .contact-terminal {
     background: rgba(13, 26, 26, 0.5);
     border: 2px solid var(--color-green);
@@ -479,10 +509,14 @@ body {
     left: 0;
 }
 
-/* Footer */
+/* ========================================================================== */
+/*                                 Footer                                     */
+/* ========================================================================== */
+
 .footer {
     background: rgba(0, 0, 0, 0.9);
     border-top: 1px solid var(--neon-primary);
+    padding: 70px;
 }
 
 .footer-text {
@@ -496,7 +530,10 @@ body {
     text-shadow: 0 0 5px var(--color-pink);
 }
 
-/* Outros */
+/* ========================================================================== */
+/*                                 Outros                                     */
+/* ========================================================================== */
+
 html { scroll-behavior: smooth; }
 
 .fade-in {
@@ -598,26 +635,417 @@ html { scroll-behavior: smooth; }
     margin-bottom: 2rem;
 }
 
-/* Media Queries (sem alterações, mantidos para responsividade) */
+.cert-terminal-style {
+    background: rgba(13, 26, 26, 0.5);
+    border: 2px solid var(--color-white); /* Borda Ciano */
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3), inset 0 0 20px rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+.terminal-header-cert-style {
+    background: var(--color-white); /* Fundo Ciano */
+    color: var(--bg-primary);
+    padding: 0.75rem 1rem;
+    font-family: var(--font-primary);
+    font-weight: 600;
+}
+
+.terminal-line {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed rgba(0, 255, 255, 0.2);
+}
+
+.cert-terminal-style .terminal-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cert-text-content {
+    font-family: 'Courier New', monospace;
+    color: var(--text-primary);
+    line-height: 1.5; /* Melhora o espaçamento se o título tiver duas linhas */
+}
+
+.prompt-cert-style {
+    color: var(--neon-primary); /* Cor Ciano */
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.terminal-line .contact-button {
+    font-size: 0.8rem;      /* Reduz o tamanho da fonte */
+    padding: 5px 10px;      /* Reduz o preenchimento (padding) */
+    color: var(--neon-primary);
+    border-color: var(--neon-primary);
+    max-width: 50px;
+}
+
+/* Ajusta o efeito hover do botão */
+.terminal-line .contact-button:hover {
+    background: var(--neon-primary);
+    color: var(--bg-primary);
+    box-shadow: 0 0 15px var(--neon-primary);
+}
+
+/* Ajusta o brilho do botão */
+.terminal-line .contact-button .button-glow {
+    background: var(--neon-primary);
+}
+
+/* 7. Estilo para Certificados Desabilitados (Em Andamento) */
+.disabled-cert {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none; /* Impede o clique */
+}
+
+.btn-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px); /* começa um pouco deslocado */
+  background: var(--neon-primary); /* neon */
+  color: var(--bg-primary);
+  border: none;
+  border-radius: 50%;
+  padding: 12px 16px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--neon-primary); /* neon */
+  transition: all 0.4s ease; /* animação */
+  z-index: 999;
+}
+
+.btn-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0); /* volta para a posição normal */
+}
+
+.btn-top:hover {
+  background: var(--color-yellow);
+  color: var(--bg-primary);
+  box-shadow: 0 0 15px var(--color-yellow)
+}
+
+/* ========================================================================== */
+/*                                 Media Queries                              */
+/* ========================================================================== */
+
+/* Tablets e telas médias (até 1199px) */
+@media (max-width: 1199.98px) {
+    .hero-section {
+        padding: 5rem 0 3rem;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+    }
+    
+    .skill-category {
+        padding: 1.8rem;
+    }
+    
+    .project-card {
+        padding: 1.8rem;
+    }
+}
+
+/* Tablets pequenos e telas médias (até 991px) */
 @media (max-width: 991.98px) {
-.letter { font-size: 2.5rem; }
-    .section-title { font-size: 2rem; }
-    .hero-subtitle { font-size: 1.2rem; }
-    .profile-container { width: 250px; height: 250px; }
+    .letter { 
+        font-size: 2.5rem; 
+    }
+    
+    .section-title { 
+        font-size: 2rem; 
+        letter-spacing: 2px;
+    }
+    
+    .hero-subtitle { 
+        font-size: 1.2rem; 
+    }
+    
+    .profile-container { 
+        width: 250px; 
+        height: 250px; 
+    }
+    
+    .navbar-brand {
+        font-size: 1.3rem;
+    }
+    
+    .skill-category {
+        padding: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .project-card {
+        padding: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .category-title {
+        font-size: 1.1rem;
+        letter-spacing: 1.5px;
+    }
+    
+    .footer {
+        padding: 50px 20px;
+    }
 }
+
+/* Smartphones e telas pequenas (até 767px) */
 @media (max-width: 767.98px) {
-    .letter { font-size: 2rem; }
-    .section-title {font-size: 1.3rem;}
-    .hero-subtitle { font-size: 1rem; }
-    .profile-container { width: 200px; height: 200px; }
-    .project-title { font-size: 1rem; }
-    .skill-chip { padding: 0.75rem; }
-    .contact-button { font-size: 1rem; padding: 0.75rem 1.5rem; }
+    .letter { 
+        font-size: 2rem; 
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        letter-spacing: 1.5px;
+    }
+    
+    .hero-subtitle { 
+        font-size: 1rem; 
+    }
+    
+    .profile-container { 
+        width: 200px; 
+        height: 200px; 
+    }
+    
+    .project-title { 
+        font-size: 1rem; 
+    }
+    
+    .skill-chip { 
+        padding: 0.75rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .contact-button { 
+        font-size: 1rem; 
+        padding: 0.75rem 1.5rem; 
+    }
+    
+    .hero-section {
+        padding: 4rem 0 2rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    
+    .neon-nav {
+        padding: 0.75rem 0;
+    }
+    
+    .skill-category {
+        padding: 1.4rem;
+    }
+    
+    .project-card {
+        padding: 1.4rem;
+    }
+    
+    .category-title {
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+    
+    .tech-tag {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.6rem;
+        margin: 0.2rem;
+    }
+    
+    .project-status {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.6rem;
+    }
+    
+    .terminal-header,
+    .terminal-header-credit,
+    .terminal-header-cert-style {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    .footer {
+        padding: 40px 15px;
+    }
+    
+    .footer-text {
+        font-size: 0.8rem;
+    }
 }
+
+/* Smartphones pequenos (até 575px) */
 @media (max-width: 575.98px) {
-    .name-display { gap: 1rem; }
-    .letter { font-size: 1.5rem; }
-    .terminal-body { padding: 1rem !important; }
-    .skill-category { padding: 1.5rem; }
-    .project-card { padding: 1.5rem; }
+    .name-display { 
+        gap: 0.5rem; 
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .letter { 
+        font-size: 1.5rem; 
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    
+    .terminal-body { 
+        padding: 1rem !important; 
+        font-size: 0.85rem;
+    }
+    
+    .skill-category { 
+        padding: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .project-card { 
+        padding: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-section {
+        padding: 3rem 0 2rem;
+    }
+    
+    .profile-container {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+    
+    .skill-chip {
+        padding: 0.6rem;
+        font-size: 0.85rem;
+    }
+    
+    .skill-icon {
+        font-size: 1.2rem;
+        width: 25px;
+    }
+    
+    .contact-button {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    .project-link {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+        width: 100%;
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+    
+    .category-title {
+        font-size: 0.95rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    .scroll-text {
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+    }
+    
+    .footer {
+        padding: 30px 10px;
+        text-align: center;
+    }
+    
+    .btn-top {
+        bottom: 15px;
+        right: 15px;
+        padding: 10px 14px;
+        font-size: 16px;
+    }
+}
+
+/* Smartphones muito pequenos (até 400px) */
+@media (max-width: 400px) {
+    .letter {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 1.3rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.8rem;
+    }
+    
+    .profile-container {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .skill-category,
+    .project-card {
+        padding: 1rem;
+    }
+    
+    .terminal-body {
+        padding: 0.8rem !important;
+        font-size: 0.8rem;
+    }
+    
+    .contact-button {
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1rem;
+    }
+    
+    .footer {
+        padding: 25px 8px;
+    }
+}
+
+/* Ajustes específicos para orientação landscape em dispositivos móveis */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero-section {
+        padding: 2rem 0 1rem;
+    }
+    
+    .profile-container {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .letter {
+        font-size: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.4rem;
+    }
 }
