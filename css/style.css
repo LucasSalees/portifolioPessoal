@@ -975,7 +975,7 @@ html { scroll-behavior: smooth; }
     }
     
     .footer {
-        padding: 30px 10px;
+        padding: 30px 50px;
         text-align: center;
     }
     
@@ -1026,7 +1026,7 @@ html { scroll-behavior: smooth; }
     }
     
     .footer {
-        padding: 25px 8px;
+        padding: 25px 25px;
     }
 }
 
