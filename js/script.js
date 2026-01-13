@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'JAVA_DEVELOPER',
         'SPRING_BOOT',
         'FULL_STACK',
-        'DATABASE_ARCHITECT',
+        'CLEAN_CODE',
         'CODE_INNOVATOR'
     ];
     
