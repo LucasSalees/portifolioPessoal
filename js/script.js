@@ -99,6 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'SPRING_BOOT',
         'FULL_STACK',
         'CLEAN_CODE',
+        'TYPE_SCRIPT',
         'CODE_INNOVATOR'
     ];
     
@@ -262,5 +263,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
-
