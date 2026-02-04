@@ -95,12 +95,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const typingElement = document.getElementById('typing-text');
     const texts = [
-        'JAVA_DEVELOPER',
-        'SPRING_BOOT',
         'FULL_STACK',
-        'CLEAN_CODE',
-        'TYPE_SCRIPT',
-        'CODE_INNOVATOR'
+        'CLEAN_CODE'
     ];
     
     let textIndex = 0;
