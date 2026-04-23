@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ouvemed - Sistema Autônomo para Gestão Médica">
+    <title>Lucas Sales | Ouvemed</title>
+    
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <button id="btnTop" class="btn-top" aria-label="Voltar ao topo">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <nav class="navbar navbar-expand-lg glass-nav fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand accent-text" href="../index.html#home">LS</a>
+
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger-icon">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link custom-link" href="index.html#about">SOBRE</a></li>
+                    <li class="nav-item"><a class="nav-link custom-link active" href="index.html#projects">PROJETOS</a></li>
+                    <li class="nav-item"><a class="nav-link custom-link" href="index.html#contact">CONTATO</a></li>
+                    <li class="nav-item"><a class="nav-link custom-link" href="#" data-bs-toggle="modal" data-bs-target="#resumeModal">CURRÍCULO</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="py-5 d-flex align-items-center" style="padding-top: 150px !important; min-height: 80vh;">
+            <div class="container">
+                
+                <div class="row align-items-center mb-5">
+                    <div class="col-lg-8">
+                        <span class="badge bg-dark text-white mb-3 px-3 py-2 rounded-0" style="letter-spacing: 1px;">PLATAFORMA SAAS</span>
+                        <h1 class="display-4 fw-bold mb-3 accent-text" style="font-family: var(--font-titulo);">Ouvemed</h1>
+                        <h2 class="h4 mb-4 opacity-75">Prontuário Autônomo Inteligente</h2>
+                        <p class="lead" style="line-height: 1.8;">
+                            Uma plataforma criada para resolver um dos maiores gargalos da saúde: o tempo gasto com burocracia. O Ouvemed automatiza o preenchimento de prontuários de forma autônoma, devolvendo ao médico o foco total no paciente.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                        <div class="floating-card p-4">
+                            <h6 class="text-muted mb-3 text-start text-uppercase opacity-75" style="font-size: 0.8rem; letter-spacing: 1px;">Status do Projeto</h6>
+                            <p class="fw-bold text-start mb-4"><i class="bi bi-circle-fill text-warning me-2"></i> Desenvolvimento / Beta</p>
+                            <a href="https://prontuario-automono-develop.netlify.app/" class="btn-action w-100 text-center py-3 redirect-link" data-plataforma="SaaS Ouvemed" target="_blank">
+                                ACESSAR PLATAFORMA
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center mt-5">
+                    <div class="col-lg-12">
+                        <div class="floating-card p-4 p-md-5">
+                            
+                            <div class="row g-5">
+                                <div class="col-md-6">
+                                    <h3 class="accent-text mb-4" style="font-family: var(--font-titulo);">O Problema</h3>
+                                    <p class="text-content" style="line-height: 1.8;">
+                                        Durante uma consulta médica, grande parte do tempo é consumida pela digitação do histórico do paciente, sintomas e prescrições. Isso cria uma barreira entre o médico e o paciente (o olhar fixo na tela) e diminui a quantidade e a qualidade dos atendimentos diários, gerando fadiga profissional e atrasos nas clínicas.
+                                    </p>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <h3 class="accent-text mb-4" style="font-family: var(--font-titulo);">A Solução Ouvemed</h3>
+                                    <p class="text-content" style="line-height: 1.8;">
+                                        Através de Inteligência Artificial de ponta, o sistema funciona como um assistente invisível. Ele capta o contexto da conversa clínica, estrutura os dados automaticamente no formato médico padrão e gera o prontuário. O médico apenas revisa e aprova, garantindo um atendimento muito mais humano, ágil e livre de telas.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <hr class="my-5 opacity-25">
+
+                            <h3 class="accent-text mb-5 text-center" style="font-family: var(--font-titulo);">Pilares da Plataforma</h3>
+                            
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <div class="p-4 border h-100" style="background: var(--bg-light);">
+                                        <i class="bi bi-shield-lock fs-1 accent-text mb-3 d-block"></i>
+                                        <h5 class="fw-bold">Privacidade Absoluta</h5>
+                                        <p class="small mb-0 opacity-75">
+                                            Arquitetura Multi-tenant severa. Os dados de uma clínica operam em silos completamente isolados de outras, garantindo conformidade total com normas de proteção de dados.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="p-4 border h-100" style="background: var(--bg-light);">
+                                        <i class="bi bi-cpu fs-1 accent-text mb-3 d-block"></i>
+                                        <h5 class="fw-bold">Inteligência Generativa</h5>
+                                        <p class="small mb-0 opacity-75">
+                                            Processamento de linguagem natural (LLM) treinado para entender jargões médicos, dosagens e CID, transformando diálogos informais em documentos clínicos precisos.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="p-4 border h-100" style="background: var(--bg-light);">
+                                        <i class="bi bi-person-bounding-box fs-1 accent-text mb-3 d-block"></i>
+                                        <h5 class="fw-bold">Gestão Granular (RBAC)</h5>
+                                        <p class="small mb-0 opacity-75">
+                                            Hierarquia inteligente de perfis. Médicos, recepcionistas e administradores possuem acessos sob medida, garantindo a segurança operacional do fluxo da clínica.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact" class="py-5 min-vh-100 d-flex align-items-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="text-center mb-5">
+                            <h2 class="section-title">Gostou do Projeto?</h2>
+                        </div>
+                        
+                        <div class="floating-card p-4 p-md-5">
+                            <h4 class="mb-4 accent-text text-center">Mande uma Mensagem</h4>
+                            <form id="portfolioContactForm" action="https://formsubmit.co/ajax/d9dbf8fbb7c11e0b4f40ef681be33bf5" method="POST" class="needs-validation" novalidate>
+                                <input type="hidden" name="_subject" value="Novo contato via Portfólio (Case Ouvemed)!">
+                                <input type="hidden" name="_template" value="table">
+                                <input type="text" name="_honey" style="display:none">
+                                <input type="hidden" name="_captcha" value="false">
+
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <input type="text" name="nome" class="form-control bg-dark text-white border-secondary custom-placeholder py-2" placeholder="Seu nome completo" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="tel" name="telefone" id="telefoneInput" class="form-control bg-dark text-white border-secondary custom-placeholder py-2" placeholder="(00) 00000-0000" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <input type="email" name="email" class="form-control bg-dark text-white border-secondary custom-placeholder py-2" placeholder="Ex: seu.email@dominio.com" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <textarea name="mensagem" class="form-control bg-dark text-white border-secondary custom-placeholder py-2" rows="5" placeholder="Como posso ajudar no seu projeto?" required></textarea>
+                                    </div>
+                                    
+                                    <div class="col-12 mt-4 d-flex justify-content-center">
+                                        <button type="submit" class="btn-action py-3 px-5" id="btnEnviarMensagem">ENVIAR MENSAGEM</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer py-5 text-center mt-auto">
+        <div class="container">
+            <p class="footer-text mb-2">Design & Desenvolvimento por <span class="accent-text fw-bold">Lucas Sales</span></p>
+            <p class="footer-text small mb-0">
+                LUCAS.DEV © <span id="timestamp"></span><br>
+                Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+
+</body>
+</html>

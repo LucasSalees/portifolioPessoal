@@ -1,4 +1,75 @@
 document.addEventListener('DOMContentLoaded', function() {
+
+    /* ========================================================================== */
+    /* 0. MODAIS GLOBAIS (INJEÇÃO DINÂMICA)                                       */
+    /* ========================================================================== */
+    function injectGlobalModals() {
+        // Se o modal de currículo já existir na página, não faz nada para evitar duplicidade
+        if (document.getElementById('resumeModal')) return;
+
+        const globaisHTML = `
+            <div class="modal fade custom-modal" id="resumeModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header border-0 pb-0">
+                            <h5 class="modal-title accent-text fw-bold">Currículo Profissional</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-center py-4">
+                            <p>Clique no botão abaixo para fazer o download do meu currículo em PDF.</p>
+                        </div>
+                        <div class="modal-footer border-0 d-flex justify-content-center pt-0">
+                            <a href="assets/lucasCurriculo.pdf" class="btn-action" download target="_blank">
+                                <i class="bi bi-download me-2"></i> Baixar PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade custom-modal" id="redirectModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header border-0 pb-0">
+                            <h5 class="modal-title accent-text fw-bold">Aviso de Saída</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body text-center py-4">
+                            <p>Você está saindo do meu portfólio.</p>
+                            <p class="mt-2 mb-0" id="redirectPlatformName" style="opacity: 0.8; font-size: 0.9em;">Deseja acessar a plataforma externa?</p>
+                        </div>
+                        <div class="modal-footer border-0 d-flex justify-content-center pt-0 gap-2">
+                            <button type="button" class="btn-action-outline m-0" data-bs-dismiss="modal">Ficar Aqui</button>
+                            <a href="#" id="btnConfirmRedirect" class="btn-action m-0" target="_blank">Continuar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade custom-modal" id="sucessoContactModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header border-0 pb-0 text-center w-100 justify-content-center">
+                            <h5 class="modal-title accent-text fw-bold w-100"><i class="bi bi-check-circle-fill me-2"></i>Enviado!</h5>
+                        </div>
+                        <div class="modal-body text-center py-4">
+                            <p>Sua mensagem foi entregue com sucesso.</p>
+                            <p class="mt-2 mb-0" style="opacity: 0.8; font-size: 0.9em;">Retornarei o contato o mais breve possível.</p>
+                        </div>
+                        <div class="modal-footer border-0 d-flex justify-content-center pt-0">
+                            <button type="button" class="btn-action" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        // Insere o HTML dos modais no final do <body>
+        document.body.insertAdjacentHTML('beforeend', globaisHTML);
+    }
+
+    // Executa a injeção antes de rodar os scripts de clique
+    injectGlobalModals();
     
     /* ========================================================================== */
     /* 1. NAVBAR & MENU MOBILE                                                    */
@@ -19,6 +90,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // ScrollSpy: Link Ativo na Navegação
     function updateActiveNavLink() {
         let current = '';
+        
+        // CÉREBRO DO SCROLLSPY: Se a página não tem a seção 'home', sabemos que é uma página de Case de Estudo.
+        const isCasePage = !document.getElementById('home'); 
+        
+        if (isCasePage) {
+            current = 'projects'; // Mantém "Projetos" aceso por padrão nas páginas de case
+        }
+
         sections.forEach(section => {
             const sectionTop = section.offsetTop - 150;
             if (window.scrollY >= sectionTop) {
@@ -28,7 +107,10 @@ document.addEventListener('DOMContentLoaded', function() {
         
         navLinks.forEach(link => {
             link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) {
+            const href = link.getAttribute('href');
+            
+            // Usamos endsWith para o JS reconhecer tanto "#contact" quanto "index.html#contact"
+            if (href && href.endsWith(`#${current}`)) {
                 link.classList.add('active');
             }
         });
