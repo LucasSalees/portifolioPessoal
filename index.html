@@ -44,11 +44,17 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link custom-link" href="#about">SOBRE</a></li>
-                    <li class="nav-item"><a class="nav-link custom-link" href="#projects">PROJETOS</a></li>
-                    <li class="nav-item"><a class="nav-link custom-link" href="#contact">CONTATO</a></li>
-                    <li class="nav-item"><a class="nav-link custom-link" href="#" data-bs-toggle="modal" data-bs-target="#resumeModal">CURRÍCULO</a></li>
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link custom-link" href="#about" data-i18n="nav-about">SOBRE</a></li>
+                    <li class="nav-item"><a class="nav-link custom-link" href="#projects" data-i18n="nav-projects">PROJETOS</a></li>
+                    <li class="nav-item"><a class="nav-link custom-link" href="#contact" data-i18n="nav-contact">CONTATO</a></li>
+                    <li class="nav-item"><a class="nav-link custom-link" href="#" data-bs-toggle="modal" data-bs-target="#resumeModal" data-i18n="nav-resume">CURRÍCULO</a></li>
+                    
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <button id="langToggle" class="btn-action-outline py-1 px-3" style="font-size: 0.85rem;">
+                            <i class="bi bi-globe me-1"></i> <span id="langText">EN</span>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -76,7 +82,7 @@
             </div>
             <div class="scroll-indicator position-absolute bottom-0 start-50 translate-middle-x mb-4">
                 <div class="scroll-arrow mx-auto"></div>
-                <span class="scroll-text d-block text-center mt-2">DESLIZE PARA BAIXO</span>
+                <span class="scroll-text d-block text-center mt-2" data-i18n="hero-scroll">DESLIZE PARA BAIXO</span>
             </div>
         </section>
 
@@ -84,21 +90,21 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2 class="section-title text-center mb-5">Sobre Mim</h2>
+                        <h2 class="section-title text-center mb-5" data-i18n="about-title">Sobre Mim</h2>
                     </div>
                     <div class="col-lg-10 mx-auto">
                         <div class="floating-card p-4 p-md-5">
                             <div class="row">
                                 <div class="col-12 text-content">
-                                    <p><span class="accent-dot"></span> Meu nome é <span class="highlight">Lucas Sales</span>, tenho 25 anos e moro em Votorantim, São Paulo.</p>
-                                    <p><span class="accent-dot"></span> Atualmente, estou no <span class="highlight">7º semestre de Ciência da Computação</span>.</p>
-                                    <p><span class="accent-dot"></span> Possuo sólida experiência em <span class="highlight">Java</span> e <span class="highlight">Spring Boot</span>, com projetos Full-stack em produção.</p>
-                                    <p><span class="accent-dot"></span> Domínio de <span class="highlight">HTML</span>, <span class="highlight">CSS</span> e <span class="highlight">JavaScript</span> para desenvolvimento Web responsivo.</p>
-                                    <p><span class="accent-dot"></span> Foco atual na arquitetura de sistemas <span class="highlight">SaaS</span> e integrações de <span class="highlight">ERPs</span>.</p>
-                                    <p><span class="accent-dot"></span> Entusiasta na aplicação prática de <span class="highlight">Inteligência Artificial</span> e UI/UX Design para otimizar processos.</p>
-                                    <p><span class="accent-dot"></span> Atuo como <span class="highlight">Programador Multiplataforma</span> na Input Center.</p>
-                                    <p><span class="accent-dot"></span> Fluente em Inglês.</p>
-                                    <p class="mt-4 intro-highlight">
+                                    <p><span class="accent-dot"></span> <span data-i18n="about-p1">Meu nome é Lucas Sales, tenho 25 anos e moro em Votorantim, São Paulo.</span></p>
+                                    <p><span class="accent-dot"></span> <span data-i18n="about-p2">Atualmente, estou no 7º semestre de Ciência da Computação.</span></p>
+                                    <p><span class="accent-dot"></span> <span data-i18n="about-p3">Possuo sólida experiência em Java e Spring Boot, com projetos Full-stack em produção.</span></p>
+                                    <p><span class="accent-dot"></span> <span data-i18n="about-p4">Domínio de HTML, CSS e JavaScript para desenvolvimento Web responsivo.</span></p>
+                                    <p><span class="accent-dot"></span> <span data-i18n="about-p5">Foco atual na arquitetura de sistemas SaaS e integrações de ERPs.</span></p>
+                                    <p><span class="accent-dot"></span> <span data-i18n="about-p6">Entusiasta na aplicação prática de Inteligência Artificial e UI/UX Design para otimizar processos.</span></p>
+                                    <p><span class="accent-dot"></span> <span data-i18n="about-p7">Atuo como Programador Multiplataforma na Input Center.</span></p>
+                                    <p><span class="accent-dot"></span> <span data-i18n="about-p8">Fluente em Inglês.</span></p>
+                                    <p class="mt-4 intro-highlight" data-i18n="about-intro">
                                         Meu objetivo é entregar valor através de código limpo, liderar com empatia e contribuir para soluções inovadoras.
                                     </p>
                                 </div>
@@ -113,7 +119,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2 class="section-title text-center mb-5">Tecnologias</h2>
+                        <h2 class="section-title text-center mb-5" data-i18n="skills-title">Tecnologias</h2>
                     </div>
                 </div>
                 <div class="row g-4 justify-content-center">
@@ -146,7 +152,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2 class="section-title text-center mb-5">Certificados</h2>
+                        <h2 class="section-title text-center mb-5" data-i18n="certs-title">Certificados</h2>
                     </div>
                     <div class="col-lg-10 mx-auto">
                         <div class="floating-card p-4 p-md-5">
@@ -209,7 +215,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2 class="section-title text-center mb-5">Projetos</h2>
+                        <h2 class="section-title text-center mb-5" data-i18n="nav-projects">Projetos</h2>
                     </div>
                 </div>
                 <div class="row g-4 justify-content-center">
@@ -217,10 +223,10 @@
                     <div class="col-lg-4">
                         <div class="project-card h-100">
                             <div class="project-header">
-                                <h3 class="project-title">Contador de Amor</h3>
-                                <span class="project-status">Concluído</span>
+                                <h3 class="project-title" data-i18n="proj-title-love">Contador de Amor</h3>
+                                <span class="project-status" data-i18n="status-concluded">Concluído</span>
                             </div>
-                            <div class="project-description">
+                            <div class="project-description" data-i18n="proj-desc-love">
                                 Site que fiz como presente de Dia dos Namorados para minha namorada. 
                                 Incluí nossas fotos, playlist dedicada e um contador de tempo interativo.
                             </div>
@@ -228,8 +234,8 @@
                                 <span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JS</span><span class="tech-tag">BOOTSTRAP</span>
                             </div>
                             <div class="project-links mt-auto">
-                                <a href="projects/case-contador.html" class="btn-action-outline w-100 mb-2">SOBRE O PROJETO</a>
-                                <a href="https://contador-de-amor.netlify.app/" class="btn-action w-100 redirect-link" data-plataforma="Netlify (Ambiente de Produção)" target="_blank">VER PLATAFORMA</a>
+                                <a href="projects/case-contador.html" class="btn-action-outline w-100 mb-2" data-i18n="btn-about-proj">SOBRE O PROJETO</a>
+                                <a href="https://contador-de-amor.netlify.app/" class="btn-action w-100 redirect-link" data-plataforma="Netlify (Ambiente de Produção)" target="_blank" data-i18n="btn-view-proj">VER PLATAFORMA</a>
                             </div>  
                         </div>
                     </div>
@@ -238,17 +244,17 @@
                         <div class="project-card h-100">
                             <div class="project-header">
                                 <h3 class="project-title">Segurança Elétrica</h3>
-                                <span class="project-status">Concluído</span>
+                                <span class="project-status" data-i18n="status-concluded">Concluído</span>
                             </div>
-                            <div class="project-description">
+                            <div class="project-description" data-i18n="proj-desc-seguranca">
                                 Projeto de extensão acadêmica para levar conhecimento sobre práticas seguras de eletricidade a comunidades de baixa renda, incluindo um questionário avaliativo.
                             </div>
                             <div class="project-tech">
                                 <span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JS</span><span class="tech-tag">BOOTSTRAP</span>
                             </div>
                             <div class="project-links mt-auto">
-                                <a href="projects/case-seguranca.html" class="btn-action-outline w-100 mb-2">SOBRE O PROJETO</a>
-                                <a href="https://seguranca-eletrica.netlify.app/" class="btn-action w-100 redirect-link" data-plataforma="Netlify (Ambiente de Produção)" target="_blank">VER PLATAFORMA</a>
+                                <a href="projects/case-seguranca.html" class="btn-action-outline w-100 mb-2" data-i18n="btn-about-proj">SOBRE O PROJETO</a>
+                                <a href="https://seguranca-eletrica.netlify.app/" class="btn-action w-100 redirect-link" data-plataforma="Netlify (Ambiente de Produção)" target="_blank" data-i18n="btn-view-proj">VER PLATAFORMA</a>
                             </div>
                         </div>
                     </div>
@@ -257,17 +263,17 @@
                         <div class="project-card h-100">
                             <div class="project-header">
                                 <h3 class="project-title">CTUS</h3>
-                                <span class="project-status">Concluído</span>
+                                <span class="project-status" data-i18n="status-concluded">Concluído</span>
                             </div>
-                            <div class="project-description">
+                            <div class="project-description" data-i18n="proj-desc-ctus">
                                 Landing page institucional e acervo digital para o Colóquio Transdisciplinar da UNIP Sorocaba. Desenvolvido com foco em UX/UI, alta performance e design em Glassmorphism.
                             </div>
                             <div class="project-tech">
                                 <span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JS</span><span class="tech-tag">BOOTSTRAP</span>
                             </div>
                             <div class="project-links mt-auto">
-                                <a href="projects/case-ctus.html" class="btn-action-outline w-100 mb-2">SOBRE O PROJETO</a>
-                                <a href="https://ctus.com.br" class="btn-action w-100 redirect-link" data-plataforma="Site Oficial CTUS" target="_blank">VER PLATAFORMA</a>
+                                <a href="projects/case-ctus.html" class="btn-action-outline w-100 mb-2" data-i18n="btn-about-proj">SOBRE O PROJETO</a>
+                                <a href="https://ctus.com.br" class="btn-action w-100 redirect-link" data-plataforma="Site Oficial CTUS" target="_blank" data-i18n="btn-view-proj">VER PLATAFORMA</a>
                             </div>
                         </div>
                     </div>
@@ -276,17 +282,17 @@
                         <div class="project-card h-100">
                             <div class="project-header">
                                 <h3 class="project-title">brbee.SOLUTIONS</h3>
-                                <span class="project-status">Concluído</span>
+                                <span class="project-status" data-i18n="status-concluded">Concluído</span>
                             </div>
-                            <div class="project-description">
+                            <div class="project-description" data-i18n="proj-desc-brbee">
                                 Portal institucional e de captação de talentos para uma marca de soluções digitais. Conta com UX avançada, design em Glassmorphism, scroll horizontal matemático e envio de formulários via AJAX.
                             </div>
                             <div class="project-tech">
                                 <span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JS</span><span class="tech-tag">BOOTSTRAP</span>
                             </div>
                             <div class="project-links mt-auto">
-                                <a href="projects/case-brbee.html" class="btn-action-outline w-100 mb-2">SOBRE O PROJETO</a>
-                                <a href="https://brbeesolutions.netlify.app" class="btn-action w-100 redirect-link" data-plataforma="Site Oficial brbee" target="_blank">VER PLATAFORMA</a>
+                                <a href="projects/case-brbee.html" class="btn-action-outline w-100 mb-2" data-i18n="btn-about-proj">SOBRE O PROJETO</a>
+                                <a href="https://brbeesolutions.netlify.app" class="btn-action w-100 redirect-link" data-plataforma="Site Oficial brbee" target="_blank" data-i18n="btn-view-proj">VER PLATAFORMA</a>
                             </div>
                         </div>
                     </div>
@@ -295,9 +301,9 @@
                         <div class="project-card h-100">
                             <div class="project-header">
                                 <h3 class="project-title">Ouvemed</h3>
-                                <span class="project-status in-progress">SaaS em Andamento</span>
+                                <span class="project-status in-progress" data-i18n="status-progress">SaaS em Andamento</span>
                             </div>
-                            <div class="project-description">
+                            <div class="project-description" data-i18n="proj-desc-ouvemed">
                                 Sistema SaaS Multi-tenant para gestão médica. Destaca-se por arquitetura de segurança Enterprise com RBAC granular, interceptação avançada de JWT e IA Generativa (LLM).
                             </div>
                             <div class="project-tech">
@@ -308,8 +314,8 @@
                                 <span class="tech-tag">IA GENERATIVA</span>
                             </div>
                             <div class="project-links mt-auto">
-                                <a href="projects/case-ouvemed.html" class="btn-action-outline w-100 mb-2">SOBRE O PROJETO</a>
-                                <a href="https://prontuario-automono-develop.netlify.app/" class="btn-action w-100 redirect-link" data-plataforma="Ambiente de Testes (Develop)" target="_blank">ACESSAR PLATAFORMA</a>
+                                <a href="projects/case-ouvemed.html" class="btn-action-outline w-100 mb-2" data-i18n="btn-about-proj">SOBRE O PROJETO</a>
+                                <a href="https://prontuario-automono-develop.netlify.app/" class="btn-action w-100 redirect-link" data-plataforma="Ambiente de Testes (Develop)" target="_blank" data-i18n="btn-view-proj">ACESSAR PLATAFORMA</a>
                             </div>
                         </div>
                     </div>
@@ -322,24 +328,24 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2 class="section-title text-center mb-5">Contato</h2>
+                        <h2 class="section-title text-center mb-5" data-i18n="contact-title-home">Contato</h2>
                     </div>
                 </div>
                 <div class="row align-items-stretch">
                     <div class="col-lg-5 mb-4 mb-lg-0">
                         <div class="floating-card p-4 p-md-5 h-100 d-flex flex-column">
-                            <h4 class="mb-4 accent-text">Status Atual</h4>
+                            <h4 class="mb-4 accent-text" data-i18n="contact-status-title">Status Atual</h4>
                             <div class="text-content flex-grow-1">
-                                <p><i class="bi bi-geo-alt-fill me-2"></i> Votorantim, São Paulo</p>
-                                <p><i class="bi bi-briefcase-fill me-2"></i> Disponível para oportunidades</p>
-                                <p><i class="bi bi-code-slash me-2"></i> Desenvolvimento Full-Stack</p>
+                                <p><i class="bi bi-geo-alt-fill me-2"></i> <span data-i18n="contact-status-loc">Votorantim, São Paulo</span></p>
+                                <p><i class="bi bi-briefcase-fill me-2"></i> <span data-i18n="contact-status-disp">Disponível para oportunidades</span></p>
+                                <p><i class="bi bi-code-slash me-2"></i> <span data-i18n="contact-status-dev">Desenvolvimento Full-Stack</span></p>
                                 <p class="mt-4" style="opacity: 0.6; font-size: 0.9em;">
-                                    <i>Hobbies: Treinando Kickboxing, sofrendo pelo Corinthians e cuidando dos meus Shimpakus.</i>
+                                    <i data-i18n="contact-status-hob">Hobbies: Treinando Kickboxing, sofrendo pelo Corinthians e cuidando dos meus Shimpakus.</i>
                                 </p>
                             </div>
                             
                             <div class="mt-4 pt-4 border-top border-secondary">
-                                <h6 class="accent-text mb-3">Minhas Redes</h6>
+                                <h6 class="accent-text mb-3" data-i18n="contact-networks">Minhas Redes</h6>
                                 <div class="d-flex gap-2">
                                     <a href="https://www.linkedin.com/in/lucas-salees/" class="btn-action-outline flex-grow-1 text-center py-2 px-0 redirect-link" data-plataforma="LinkedIn" target="_blank" title="LinkedIn">
                                         <i class="bi bi-linkedin fs-4"></i>
@@ -357,7 +363,7 @@
 
                     <div class="col-lg-7">
                         <div class="floating-card p-4 p-md-5 h-100">
-                            <h4 class="mb-4 accent-text">Mande uma Mensagem</h4>
+                            <h4 class="mb-4 accent-text" data-i18n="form-title">Mande uma Mensagem</h4>
                             <form id="portfolioContactForm" action="https://formsubmit.co/ajax/d9dbf8fbb7c11e0b4f40ef681be33bf5" method="POST" class="needs-validation" novalidate>
                                 <input type="hidden" name="_subject" value="Novo contato via Portfólio!">
                                 <input type="hidden" name="_template" value="table">
@@ -366,19 +372,20 @@
 
                                 <div class="row g-3">
                                     <div class="col-md-6">
-                                        <input type="text" name="nome" class="form-control bg-dark text-white border-secondary custom-placeholder py-2" placeholder="Seu nome completo" required>
+                                        <input type="text" name="nome" class="form-control bg-dark text-white border-secondary custom-placeholder py-2" data-i18n="form-name" placeholder="Seu nome completo" required>
                                     </div>
                                     <div class="col-md-6">
-                                        <input type="tel" name="telefone" id="telefoneInput" class="form-control bg-dark text-white border-secondary custom-placeholder py-2" placeholder="(00) 00000-0000" required>
+                                        <input type="tel" name="telefone" id="telefoneInput" class="form-control bg-dark text-white border-secondary custom-placeholder py-2" data-i18n="form-phone" placeholder="(00) 00000-0000" required>
                                     </div>
                                     <div class="col-12">
-                                        <input type="email" name="email" class="form-control bg-dark text-white border-secondary custom-placeholder py-2" placeholder="Ex: seu.email@dominio.com" required>
+                                        <input type="email" name="email" class="form-control bg-dark text-white border-secondary custom-placeholder py-2" data-i18n="form-email" placeholder="Ex: seu.email@dominio.com" required>
                                     </div>
                                     <div class="col-12">
-                                        <textarea name="mensagem" class="form-control bg-dark text-white border-secondary custom-placeholder py-2" rows="5" placeholder="Como posso ajudar no seu projeto?" required></textarea>
+                                        <textarea name="mensagem" class="form-control bg-dark text-white border-secondary custom-placeholder py-2" rows="5" data-i18n="form-msg" placeholder="Como posso ajudar no seu projeto?" required></textarea>
                                     </div>
-                                    <div class="col-12 mt-4">
-                                        <button type="submit" class="btn-action w-100 py-3" id="btnEnviarMensagem">ENVIAR MENSAGEM</button>
+                                    
+                                    <div class="col-12 mt-4 d-flex justify-content-center">
+                                        <button type="submit" class="btn-action w-100 py-3" id="btnEnviarMensagem" data-i18n="form-btn">ENVIAR MENSAGEM</button>
                                     </div>
                                 </div>
                             </form>
@@ -389,12 +396,12 @@
         </section>
     </main>
 
-    <footer class="footer py-5 text-center">
+    <footer class="footer py-5 text-center mt-auto">
         <div class="container">
-            <p class="footer-text mb-2">Design & Desenvolvimento por <span class="accent-text fw-bold">Lucas Sales</span></p>
+            <p class="footer-text mb-2"><span data-i18n="footer-design">Design & Desenvolvimento por</span> <span class="accent-text fw-bold">Lucas Sales</span></p>
             <p class="footer-text small mb-0">
                 LUCAS.DEV © <span id="timestamp"></span><br>
-                Todos os direitos reservados.
+                <span data-i18n="footer-rights">Todos os direitos reservados.</span>
             </p>
         </div>
     </footer>
@@ -406,10 +413,10 @@
                     <h5 class="modal-title accent-text" id="certModalTitle">Título</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
-                <div class="modal-body text-center"><p>Faça o download do certificado abaixo.</p></div>
+                <div class="modal-body text-center"><p data-i18n="modal-cert-desc">Faça o download do certificado abaixo.</p></div>
                 <div class="modal-footer border-0 justify-content-center">
                     <a href="#" id="certModalLink" class="btn-action" download target="_blank">
-                        <i class="bi bi-download me-2"></i> Baixar PDF
+                        <i class="bi bi-download me-2"></i> <span data-i18n="modal-resume-btn">Baixar PDF</span>
                     </a>
                 </div>
             </div>

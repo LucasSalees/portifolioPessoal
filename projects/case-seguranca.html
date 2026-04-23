@@ -23,9 +23,11 @@
 
     <nav class="navbar navbar-expand-lg glass-nav fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand accent-text" href="../index.html#home">LS</a>
+            <a class="navbar-brand accent-text d-flex align-items-center" href="../index.html#home">
+                <i class="bi bi-arrow-left me-2 fs-5"></i> <span data-i18n="nav-back">VOLTAR</span>
+            </a>
 
-            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <div class="hamburger-icon">
                     <span class="line"></span>
                     <span class="line"></span>
@@ -34,11 +36,16 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link custom-link" href="index.html#about">SOBRE</a></li>
-                    <li class="nav-item"><a class="nav-link custom-link active" href="index.html#projects">PROJETOS</a></li>
-                    <li class="nav-item"><a class="nav-link custom-link" href="index.html#contact">CONTATO</a></li>
-                    <li class="nav-item"><a class="nav-link custom-link" href="#" data-bs-toggle="modal" data-bs-target="#resumeModal">CURRÍCULO</a></li>
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link custom-link" href="../index.html#about" data-i18n="nav-about">SOBRE</a></li>
+                    <li class="nav-item"><a class="nav-link custom-link active" href="../index.html#projects" data-i18n="nav-projects">PROJETOS</a></li>
+                    <li class="nav-item"><a class="nav-link custom-link" href="../index.html#contact" data-i18n="nav-contact">CONTATO</a></li>
+                    <li class="nav-item"><a class="nav-link custom-link" href="#" data-bs-toggle="modal" data-bs-target="#resumeModal" data-i18n="nav-resume">CURRÍCULO</a></li>
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <button id="langToggle" class="btn-action-outline py-1 px-3" style="font-size: 0.85rem;">
+                            <i class="bi bi-globe me-1"></i> <span id="langText">EN</span>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -47,21 +54,20 @@
     <main>
         <section class="py-5 d-flex align-items-center" style="padding-top: 150px !important; min-height: 80vh;">
             <div class="container">
-                
                 <div class="row align-items-center mb-5">
                     <div class="col-lg-8">
-                        <span class="badge bg-dark text-white mb-3 px-3 py-2 rounded-0" style="letter-spacing: 1px;">EXTENSÃO & IMPACTO SOCIAL</span>
+                        <span class="badge bg-dark text-white mb-3 px-3 py-2 rounded-0" style="letter-spacing: 1px;" data-i18n="seguranca-badge">EXTENSÃO & IMPACTO SOCIAL</span>
                         <h1 class="display-4 fw-bold mb-3 accent-text" style="font-family: var(--font-titulo);">Segurança Elétrica</h1>
-                        <h2 class="h4 mb-4 opacity-75">Conscientização e Prevenção Digital</h2>
-                        <p class="lead" style="line-height: 1.8;">
+                        <h2 class="h4 mb-4 opacity-75" data-i18n="seguranca-subtitle">Conscientização e Prevenção Digital</h2>
+                        <p class="lead" style="line-height: 1.8;" data-i18n="seguranca-lead">
                             Um projeto de extensão universitária desenvolvido para democratizar o acesso à informação sobre segurança elétrica em comunidades de baixa renda, prevenindo acidentes domésticos graves através da educação digital.
                         </p>
                     </div>
                     <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
                         <div class="floating-card p-4">
-                            <h6 class="text-muted mb-3 text-start text-uppercase opacity-75" style="font-size: 0.8rem; letter-spacing: 1px;">Status do Projeto</h6>
-                            <p class="fw-bold text-start mb-4"><i class="bi bi-circle-fill text-success me-2"></i> Concluído / Extensão UNIP</p>
-                            <a href="https://seguranca-eletrica.netlify.app/" class="btn-action w-100 text-center py-3 redirect-link" data-plataforma="Segurança Elétrica" target="_blank">
+                            <h6 class="text-muted mb-3 text-start text-uppercase opacity-75" style="font-size: 0.8rem; letter-spacing: 1px;" data-i18n="case-status-title">Status do Projeto</h6>
+                            <p class="fw-bold text-start mb-4"><i class="bi bi-circle-fill text-success me-2"></i> <span data-i18n="seguranca-status">Concluído / Extensão UNIP</span></p>
+                            <a href="https://seguranca-eletrica.netlify.app/" class="btn-action w-100 text-center py-3 redirect-link" data-plataforma="Segurança Elétrica" target="_blank" data-i18n="case-btn-access">
                                 ACESSAR PLATAFORMA
                             </a>
                         </div>
@@ -71,33 +77,30 @@
                 <div class="row justify-content-center mt-5">
                     <div class="col-lg-12">
                         <div class="floating-card p-4 p-md-5">
-                            
                             <div class="row g-5">
                                 <div class="col-md-6">
-                                    <h3 class="accent-text mb-4" style="font-family: var(--font-titulo);">O Problema</h3>
-                                    <p class="text-content" style="line-height: 1.8;">
+                                    <h3 class="accent-text mb-4" style="font-family: var(--font-titulo);" data-i18n="case-problem-title">O Problema</h3>
+                                    <p class="text-content" style="line-height: 1.8;" data-i18n="seguranca-problem-desc">
                                         A falta de informação básica sobre instalações elétricas e cuidados diários em residências vulneráveis resulta em altos índices de acidentes e incêndios (muitos dos quais são 90% preveníveis). O grande desafio é que a informação técnica costuma ser engessada, inacessível ou complexa demais para o público leigo assimilar na rotina da casa.
                                     </p>
                                 </div>
-
                                 <div class="col-md-6">
-                                    <h3 class="accent-text mb-4" style="font-family: var(--font-titulo);">A Solução Digital</h3>
-                                    <p class="text-content" style="line-height: 1.8;">
+                                    <h3 class="accent-text mb-4" style="font-family: var(--font-titulo);" data-i18n="seguranca-solution-title">A Solução Digital</h3>
+                                    <p class="text-content" style="line-height: 1.8;" data-i18n="seguranca-solution-desc">
                                         Desenvolvi uma plataforma web interativa, amigável e com forte apelo visual para traduzir normas de segurança em dicas práticas. O sistema funciona como uma cartilha digital, abordando desde cuidados com crianças até manuseio de equipamentos, engajando os usuários através de um questionário avaliativo acessível diretamente pelo celular.
                                     </p>
                                 </div>
                             </div>
 
                             <hr class="my-5 opacity-25">
-
-                            <h3 class="accent-text mb-5 text-center" style="font-family: var(--font-titulo);">Pilares Técnicos e Sociais</h3>
+                            <h3 class="accent-text mb-5 text-center" style="font-family: var(--font-titulo);" data-i18n="seguranca-pillars-title">Pilares Técnicos e Sociais</h3>
                             
                             <div class="row g-4">
                                 <div class="col-md-4">
                                     <div class="p-4 border h-100" style="background: var(--bg-light);">
                                         <i class="bi bi-phone fs-1 accent-text mb-3 d-block"></i>
-                                        <h5 class="fw-bold">Acessibilidade Mobile-First</h5>
-                                        <p class="small mb-0 opacity-75">
+                                        <h5 class="fw-bold" data-i18n="seguranca-pillar1-title">Acessibilidade Mobile-First</h5>
+                                        <p class="small mb-0 opacity-75" data-i18n="seguranca-pillar1-desc">
                                             Projetado com botões touch-friendly e layouts colapsáveis. A estrutura foi construída para carregar rapidamente e funcionar de forma fluida em smartphones, considerando as limitações de internet das comunidades.
                                         </p>
                                     </div>
@@ -105,8 +108,8 @@
                                 <div class="col-md-4">
                                     <div class="p-4 border h-100" style="background: var(--bg-light);">
                                         <i class="bi bi-controller fs-1 accent-text mb-3 d-block"></i>
-                                        <h5 class="fw-bold">Gamificação do Ensino</h5>
-                                        <p class="small mb-0 opacity-75">
+                                        <h5 class="fw-bold" data-i18n="seguranca-pillar2-title">Gamificação do Ensino</h5>
+                                        <p class="small mb-0 opacity-75" data-i18n="seguranca-pillar2-desc">
                                             Para fixar o conteúdo de forma lúdica, a plataforma aplica princípios básicos de gamificação, utilizando questionários interativos e feedbacks em tempo real para testar o conhecimento do usuário.
                                         </p>
                                     </div>
@@ -114,18 +117,16 @@
                                 <div class="col-md-4">
                                     <div class="p-4 border h-100" style="background: var(--bg-light);">
                                         <i class="bi bi-palette fs-1 accent-text mb-3 d-block"></i>
-                                        <h5 class="fw-bold">Psicologia das Cores (UI)</h5>
-                                        <p class="small mb-0 opacity-75">
+                                        <h5 class="fw-bold" data-i18n="seguranca-pillar3-title">Psicologia das Cores (UI)</h5>
+                                        <p class="small mb-0 opacity-75" data-i18n="seguranca-pillar3-desc">
                                             Interface guiada por um sistema semântico: azul elétrico para tecnologia, amarelo para atenção/alertas e verde para ações seguras, facilitando a compreensão visual imediata por pessoas de qualquer idade.
                                         </p>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
 
@@ -134,11 +135,10 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
                         <div class="text-center mb-5">
-                            <h2 class="section-title">Gostou do Projeto?</h2>
+                            <h2 class="section-title" data-i18n="contact-title-case">Gostou do Projeto?</h2>
                         </div>
-                        
                         <div class="floating-card p-4 p-md-5">
-                            <h4 class="mb-4 accent-text text-center">Mande uma Mensagem</h4>
+                            <h4 class="mb-4 accent-text text-center" data-i18n="form-title">Mande uma Mensagem</h4>
                             <form id="portfolioContactForm" action="https://formsubmit.co/ajax/d9dbf8fbb7c11e0b4f40ef681be33bf5" method="POST" class="needs-validation" novalidate>
                                 <input type="hidden" name="_subject" value="Novo contato via Portfólio (Case Segurança Elétrica)!">
                                 <input type="hidden" name="_template" value="table">
@@ -147,20 +147,19 @@
 
                                 <div class="row g-3">
                                     <div class="col-md-6">
-                                        <input type="text" name="nome" class="form-control bg-dark text-white border-secondary custom-placeholder py-2" placeholder="Seu nome completo" required>
+                                        <input type="text" name="nome" class="form-control bg-dark text-white border-secondary custom-placeholder py-2" data-i18n="form-name" placeholder="Seu nome completo" required>
                                     </div>
                                     <div class="col-md-6">
-                                        <input type="tel" name="telefone" id="telefoneInput" class="form-control bg-dark text-white border-secondary custom-placeholder py-2" placeholder="(00) 00000-0000" required>
+                                        <input type="tel" name="telefone" id="telefoneInput" class="form-control bg-dark text-white border-secondary custom-placeholder py-2" data-i18n="form-phone" placeholder="(00) 00000-0000" required>
                                     </div>
                                     <div class="col-12">
-                                        <input type="email" name="email" class="form-control bg-dark text-white border-secondary custom-placeholder py-2" placeholder="Ex: seu.email@dominio.com" required>
+                                        <input type="email" name="email" class="form-control bg-dark text-white border-secondary custom-placeholder py-2" data-i18n="form-email" placeholder="Ex: seu.email@dominio.com" required>
                                     </div>
                                     <div class="col-12">
-                                        <textarea name="mensagem" class="form-control bg-dark text-white border-secondary custom-placeholder py-2" rows="5" placeholder="Como posso ajudar no seu projeto?" required></textarea>
+                                        <textarea name="mensagem" class="form-control bg-dark text-white border-secondary custom-placeholder py-2" rows="5" data-i18n="form-msg" placeholder="Como posso ajudar no seu projeto?" required></textarea>
                                     </div>
-                                    
                                     <div class="col-12 mt-4 d-flex justify-content-center">
-                                        <button type="submit" class="btn-action py-3 px-5" id="btnEnviarMensagem">ENVIAR MENSAGEM</button>
+                                        <button type="submit" class="btn-action py-3 px-5" id="btnEnviarMensagem" data-i18n="form-btn">ENVIAR MENSAGEM</button>
                                     </div>
                                 </div>
                             </form>
@@ -173,10 +172,10 @@
 
     <footer class="footer py-5 text-center mt-auto">
         <div class="container">
-            <p class="footer-text mb-2">Design & Desenvolvimento por <span class="accent-text fw-bold">Lucas Sales</span></p>
+            <p class="footer-text mb-2"><span data-i18n="footer-design">Design & Desenvolvimento por</span> <span class="accent-text fw-bold">Lucas Sales</span></p>
             <p class="footer-text small mb-0">
                 LUCAS.DEV © <span id="timestamp"></span><br>
-                Todos os direitos reservados.
+                <span data-i18n="footer-rights">Todos os direitos reservados.</span>
             </p>
         </div>
     </footer>
