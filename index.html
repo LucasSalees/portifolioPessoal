@@ -5,25 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Lucas Sales - Desenvolvedor Full-Stack">
-    <meta name="keywords" content="Lucas Sales, Desenvolvedor, Java, Spring Boot, Full-Stack, Programador">
+    <meta name="keywords" content="Lucas Sales, Desenvolvedor, Java, Spring Boot, Full-Stack, Programador, SaaS, Multi-tenant, Portfólio, Projetos">
     <meta name="author" content="Lucas Sales">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://portifolio-lucas-sales.netlify.app/">
+    <meta property="og:title" content="Lucas Sales | Desenvolvedor Full-Stack">
+    <meta property="og:description" content="Especialista em Java, Spring Boot e aplicações Multi-tenant SaaS. Explore meus projetos e conhecimentos.">
+    <meta property="og:image" content="https://portifolio-lucas-sales.netlify.app/images/lucas.png"> 
     
     <title>LUCAS SALES | DESENVOLVEDOR</title>
     
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
-    
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <button id="btnTop" class="btn-top" aria-label="Voltar ao topo">
-        <i class="fa-solid fa-arrow-up"></i>
+        <i class="bi bi-arrow-up"></i>
     </button>
 
     <nav class="navbar navbar-expand-lg glass-nav fixed-top" id="mainNav">
@@ -49,334 +54,363 @@
         </div>
     </nav>
 
-    <section id="home" class="hero-section min-vh-100 d-flex align-items-center">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 order-2 order-lg-1">
-                    <div class="name-display mb-4">
-                        <h1 class="main-title">LUCAS<br>SALES</h1>
+    <main>
+        <section id="home" class="hero-section min-vh-100 d-flex align-items-center">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 order-2 order-lg-1">
+                        <div class="name-display mb-4">
+                            <h1 class="main-title">LUCAS<br>SALES</h1>
+                        </div>
+                        <div class="hero-subtitle">
+                            <span class="typing-text" id="typing-text"></span>
+                            <span class="cursor-accent">|</span>
+                        </div>
                     </div>
-                    <div class="hero-subtitle">
-                        <span class="typing-text" id="typing-text"></span>
-                        <span class="cursor-accent">|</span>
-                    </div>
-                </div>
-                <div class="col-lg-6 order-1 order-lg-2 text-center mb-5 mb-lg-0">
-                    <div class="profile-container">
-                        <img src="images/lucas.png" alt="Lucas Sales - Desenvolvedor Full-Stack" class="profile-image img-fluid" loading="lazy">
+                    <div class="col-lg-6 order-1 order-lg-2 text-center mb-5 mb-lg-0">
+                        <div class="profile-container">
+                            <img src="images/lucas.png" alt="Lucas Sales - Desenvolvedor Full-Stack" class="profile-image img-fluid" loading="lazy">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="scroll-indicator position-absolute bottom-0 start-50 translate-middle-x mb-4">
-            <div class="scroll-arrow mx-auto"></div>
-            <span class="scroll-text d-block text-center mt-2">DESLIZE PARA BAIXO</span>
-        </div>
-    </section>
+            <div class="scroll-indicator position-absolute bottom-0 start-50 translate-middle-x mb-4">
+                <div class="scroll-arrow mx-auto"></div>
+                <span class="scroll-text d-block text-center mt-2">DESLIZE PARA BAIXO</span>
+            </div>
+        </section>
 
-    <section id="about" class="py-5 min-vh-100 d-flex align-items-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="section-title text-center mb-5">Sobre Mim</h2>
+        <section id="about" class="py-5 min-vh-100 d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="section-title text-center mb-5">Sobre Mim</h2>
+                    </div>
+                    <div class="col-lg-10 mx-auto">
+                        <div class="floating-card p-4 p-md-5">
+                            <div class="row">
+                                <div class="col-12 text-content">
+                                    <p><span class="accent-dot"></span> Meu nome é <span class="highlight">Lucas Sales</span>, tenho 25 anos e moro em Votorantim, São Paulo.</p>
+                                    <p><span class="accent-dot"></span> Atualmente, estou no <span class="highlight">7º semestre de Ciência da Computação</span>.</p>
+                                    <p><span class="accent-dot"></span> Possuo sólida experiência em <span class="highlight">Java</span> e <span class="highlight">Spring Boot</span>, com projetos Full-stack em produção.</p>
+                                    <p><span class="accent-dot"></span> Domínio de <span class="highlight">HTML</span>, <span class="highlight">CSS</span> e <span class="highlight">JavaScript</span> para desenvolvimento Web responsivo.</p>
+                                    <p><span class="accent-dot"></span> Foco atual na arquitetura de sistemas <span class="highlight">SaaS</span> e integrações de <span class="highlight">ERPs</span>.</p>
+                                    <p><span class="accent-dot"></span> Entusiasta na aplicação prática de <span class="highlight">Inteligência Artificial</span> e UI/UX Design para otimizar processos.</p>
+                                    <p><span class="accent-dot"></span> Atuo como <span class="highlight">Programador Multiplataforma</span> na Input Center.</p>
+                                    <p><span class="accent-dot"></span> Fluente em Inglês.</p>
+                                    <p class="mt-4 intro-highlight">
+                                        Meu objetivo é entregar valor através de código limpo, liderar com empatia e contribuir para soluções inovadoras.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-10 mx-auto">
-                    <div class="floating-card p-4 p-md-5">
-                        <div class="row">
-                            <div class="col-12 text-content">
-                                <p><span class="accent-dot"></span> Meu nome é <span class="highlight">Lucas Sales</span>, tenho 25 anos e moro em Votorantim, São Paulo.</p>
-                                <p><span class="accent-dot"></span> Atualmente, estou no <span class="highlight">7º semestre de Ciência da Computação</span>.</p>
-                                <p><span class="accent-dot"></span> Possuo sólida experiência em <span class="highlight">Java</span> e <span class="highlight">Spring Boot</span>, com projetos Full-stack em produção.</p>
-                                <p><span class="accent-dot"></span> Domínio de <span class="highlight">HTML</span>, <span class="highlight">CSS</span> e <span class="highlight">JavaScript</span> para desenvolvimento Web responsivo.</p>
-                                <p><span class="accent-dot"></span> Foco atual na arquitetura de sistemas <span class="highlight">SaaS</span> e integrações de <span class="highlight">ERPs</span>.</p>
-                                <p><span class="accent-dot"></span> Entusiasta na aplicação prática de <span class="highlight">Inteligência Artificial</span> e UI/UX Design para otimizar processos.</p>
-                                <p><span class="accent-dot"></span> Atuo como <span class="highlight">Programador Multiplataforma</span> na Input Center.</p>
-                                <p><span class="accent-dot"></span> Fluente em Inglês.</p>
-                                <p class="mt-4 intro-highlight">
-                                    Meu objetivo é entregar valor através de código limpo, liderar com empatia e contribuir para soluções inovadoras.
+            </div>
+        </section>
+
+        <section id="skills" class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="section-title text-center mb-5">Tecnologias</h2>
+                    </div>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="floating-card p-4 p-md-5">
+                            <div class="d-flex flex-wrap justify-content-center gap-3 gap-md-4">
+                                <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="skill-icon" alt="Java"/><span class="skill-name">JAVA</span></div>
+                                <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" class="skill-icon" alt="Spring Boot"/><span class="skill-name">SPRING</span></div>
+                                <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="skill-icon" alt="Python"/><span class="skill-name">PYTHON</span></div>
+                                <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="skill-icon" alt="React"/><span class="skill-name">REACT.JS</span></div>
+                                <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="skill-icon" alt="JavaScript"/><span class="skill-name">JS</span></div>
+                                <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="skill-icon" alt="HTML"/><span class="skill-name">HTML5</span></div>
+                                <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="skill-icon" alt="CSS"/><span class="skill-name">CSS3</span></div>
+                                <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" class="skill-icon" alt="Figma"/><span class="skill-name">UI / UX</span></div>
+                                <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" class="skill-icon" alt="PostgreSQL"/><span class="skill-name">POSTGRESQL</span></div>
+                                <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" class="skill-icon" alt="Supabase"/><span class="skill-name">SUPABASE</span></div>
+                                <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" class="skill-icon white-icon" alt="AWS"/><span class="skill-name">AWS</span></div>
+                                <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" class="skill-icon" alt="OpenCV"/><span class="skill-name">OPENCV</span></div>
+                                <div class="skill-chip"><i class="bi bi-robot skill-icon accent-text"></i><span class="skill-name">OPENAI API</span></div>
+                                <div class="skill-chip"><i class="bi bi-cpu skill-icon accent-text"></i><span class="skill-name">ML</span></div>
+                                <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="skill-icon" alt="Git"/><span class="skill-name">GIT</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 min-vh-100 d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="section-title text-center mb-5">Certificados</h2>
+                    </div>
+                    <div class="col-lg-10 mx-auto">
+                        <div class="floating-card p-4 p-md-5">
+                            
+                            <div class="cert-line">
+                                <div class="cert-info">
+                                    <h4>JAVA FUNDAMENTALS</h4>
+                                    <span class="cert-school">Senai</span>
+                                </div>
+                                <button class="btn-action btn-cert" data-titulo="JAVA FUNDAMENTALS" data-pdf="assets/JAVA-FUNDAMENTALS.pdf"><i class="bi bi-download"></i></button>
+                            </div>
+
+                            <div class="cert-line">
+                                <div class="cert-info">
+                                    <h4>Microsoft AZ-900</h4>
+                                    <span class="cert-school">Senai</span>
+                                </div>
+                                <button class="btn-action btn-cert" data-titulo="Microsoft AZ-900" data-pdf="assets/AZ900.pdf"><i class="bi bi-download"></i></button>
+                            </div>
+
+                            <div class="cert-line">
+                                <div class="cert-info">
+                                    <h4>Master in English</h4>
+                                    <span class="cert-school">CNA</span>
+                                </div>
+                                <button class="btn-action btn-cert" data-titulo="Master in English" data-pdf="assets/CNA-INGLES.pdf"><i class="bi bi-download"></i></button>
+                            </div>
+
+                            <div class="cert-line">
+                                <div class="cert-info">
+                                    <h4>Git e GitHub</h4>
+                                    <span class="cert-school">DIO</span>
+                                </div>
+                                <button class="btn-action btn-cert" data-titulo="Git e GitHub" data-pdf="assets/git_github.pdf"><i class="bi bi-download"></i></button>
+                            </div>
+
+                            <div class="cert-line">
+                                <div class="cert-info">
+                                    <h4>Nexa - ML e GenAI na Prática</h4>
+                                    <span class="cert-school">DIO</span>
+                                </div>
+                                <button class="btn-action btn-cert" data-titulo="Nexa - ML e GenAI" data-pdf="assets/IA_AWS.pdf"><i class="bi bi-download"></i></button>
+                            </div>
+
+                            <div class="cert-line border-0 mb-0 pb-0">
+                                <div class="cert-info">
+                                    <h4>Learn React</h4>
+                                    <span class="cert-school">Scrimba</span>
+                                </div>
+                                <button class="btn-action-disabled" disabled><i class="bi bi-lock-fill"></i></button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-5 min-vh-100 d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="section-title text-center mb-5">Projetos</h2>
+                    </div>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    
+                    <div class="col-lg-4">
+                        <div class="project-card h-100">
+                            <div class="project-header">
+                                <h3 class="project-title">Contador de Amor</h3>
+                                <span class="project-status">Concluído</span>
+                            </div>
+                            <div class="project-description">
+                                Site que fiz como presente de Dia dos Namorados para minha namorada. 
+                                Incluí nossas fotos, playlist dedicada e um contador de tempo interativo.
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JS</span><span class="tech-tag">BOOTSTRAP</span>
+                            </div>
+                            <div class="project-links mt-auto">
+                                <a href="https://github.com/LucasSalees/meu_site_romantico" class="btn-action-outline w-100 mb-2 redirect-link" data-plataforma="GitHub" target="_blank">CÓDIGO</a>
+                                <a href="https://contador-de-amor.netlify.app/" class="btn-action w-100 redirect-link" data-plataforma="Netlify (Ambiente de Produção)" target="_blank">VER PROJETO</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="project-card h-100">
+                            <div class="project-header">
+                                <h3 class="project-title">Segurança Elétrica</h3>
+                                <span class="project-status">Concluído</span>
+                            </div>
+                            <div class="project-description">
+                                Projeto de extensão acadêmica para levar conhecimento sobre práticas seguras de eletricidade a comunidades de baixa renda, incluindo um questionário avaliativo.
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JS</span><span class="tech-tag">BOOTSTRAP</span>
+                            </div>
+                            <div class="project-links mt-auto">
+                                <a href="https://github.com/LucasSalees/seguranca_eletrica_projeto" class="btn-action-outline w-100 mb-2 redirect-link" data-plataforma="GitHub" target="_blank">CÓDIGO</a>
+                                <a href="https://seguranca-eletrica.netlify.app/" class="btn-action w-100 redirect-link" data-plataforma="Netlify (Ambiente de Produção)" target="_blank">VER PROJETO</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="project-card h-100">
+                            <div class="project-header">
+                                <h3 class="project-title">CTUS</h3>
+                                <span class="project-status">Concluído</span>
+                            </div>
+                            <div class="project-description">
+                                Landing page institucional e acervo digital para o Colóquio Transdisciplinar da UNIP Sorocaba. Desenvolvido com foco em UX/UI, alta performance e design em Glassmorphism.
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JS</span><span class="tech-tag">BOOTSTRAP</span>
+                            </div>
+                            <div class="project-links mt-auto">
+                                <button class="btn-action-disabled w-100 mb-2" disabled>REPO PRIVADO</button>
+                                <a href="https://ctus.com.br" class="btn-action w-100 redirect-link" data-plataforma="Site Oficial CTUS" target="_blank">VER PROJETO</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="project-card h-100">
+                            <div class="project-header">
+                                <h3 class="project-title">brbee.SOLUTIONS</h3>
+                                <span class="project-status">Concluído</span>
+                            </div>
+                            <div class="project-description">
+                                Portal institucional e de captação de talentos para uma marca de soluções digitais. Conta com UX avançada, design em Glassmorphism, scroll horizontal matemático e envio de formulários via AJAX.
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JS</span><span class="tech-tag">BOOTSTRAP</span>
+                            </div>
+                            <div class="project-links mt-auto">
+                                <button class="btn-action-disabled w-100 mb-2" disabled>REPO PRIVADO</button>
+                                <a href="https://brbeesolutions.netlify.app" class="btn-action w-100 redirect-link" data-plataforma="Site Oficial brbee" target="_blank">VER PROJETO</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="project-card h-100">
+                            <div class="project-header">
+                                <h3 class="project-title">Ouvemed</h3>
+                                <span class="project-status in-progress">SaaS em Andamento</span>
+                            </div>
+                            <div class="project-description">
+                                Sistema SaaS Multi-tenant para gestão médica. Destaca-se por arquitetura de segurança Enterprise com RBAC granular, interceptação avançada de JWT e IA Generativa (LLM).
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">JAVA</span>
+                                <span class="tech-tag">SPRING BOOT</span>
+                                <span class="tech-tag">VANILLA JS</span>
+                                <span class="tech-tag">POSTGRESQL</span>
+                                <span class="tech-tag">IA GENERATIVA</span>
+                            </div>
+                            <div class="project-links mt-auto">
+                                <button class="btn-action-disabled w-100 mb-2" disabled>REPO PRIVADO</button>
+                                <a href="https://prontuario-automono-develop.netlify.app/" class="btn-action w-100 redirect-link" data-plataforma="Ambiente de Testes (Develop)" target="_blank">VER PROJETO</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="project-card h-100">
+                            <div class="project-header">
+                                <h3 class="project-title">WinChurch</h3>
+                                <span class="project-status in-progress">SaaS em Andamento</span>
+                            </div>
+                            <div class="project-description">
+                                Plataforma SaaS Multi-tenant focada na gestão hierárquica eclesiástica (Sede, Congregações e Membros). Desenvolvida com arquitetura robusta de isolamento de dados (Tenant ID) e RBAC dinâmico.
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">JAVA</span>
+                                <span class="tech-tag">SPRING BOOT</span>
+                                <span class="tech-tag">VANILLA JS</span>
+                                <span class="tech-tag">POSTGRESQL</span>
+                                <span class="tech-tag">MULTI-TENANT</span>
+                            </div>
+                            <div class="project-links mt-auto">
+                                <button class="btn-action-disabled w-100 mb-2" disabled>REPO PRIVADO</button>
+                                <button class="btn-action-disabled w-100 mb-2" disabled>PROJETO PRIVADO</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-5 min-vh-100 d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="section-title text-center mb-5">Contato</h2>
+                    </div>
+                </div>
+                <div class="row align-items-stretch">
+                    <div class="col-lg-5 mb-4 mb-lg-0">
+                        <div class="floating-card p-4 p-md-5 h-100 d-flex flex-column">
+                            <h4 class="mb-4 accent-text">Status Atual</h4>
+                            <div class="text-content flex-grow-1">
+                                <p><i class="bi bi-geo-alt-fill me-2"></i> Votorantim, São Paulo</p>
+                                <p><i class="bi bi-briefcase-fill me-2"></i> Disponível para oportunidades</p>
+                                <p><i class="bi bi-code-slash me-2"></i> Desenvolvimento Full-Stack</p>
+                                <p class="mt-4" style="opacity: 0.6; font-size: 0.9em;">
+                                    <i>Hobbies: Treinando Kickboxing, sofrendo pelo Corinthians e cuidando dos meus Shimpakus.</i>
                                 </p>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="section-title text-center mb-5">Tecnologias</h2>
-                </div>
-            </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-lg-10">
-                    <div class="floating-card p-4 p-md-5">
-                        <div class="d-flex flex-wrap justify-content-center gap-3 gap-md-4">
-                            <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="skill-icon" alt="Java"/><span class="skill-name">JAVA</span></div>
-                            <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" class="skill-icon" alt="Spring Boot"/><span class="skill-name">SPRING</span></div>
-                            <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="skill-icon" alt="Python"/><span class="skill-name">PYTHON</span></div>
-                            <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="skill-icon" alt="React"/><span class="skill-name">REACT.JS</span></div>
-                            <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="skill-icon" alt="JavaScript"/><span class="skill-name">JS</span></div>
-                            <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="skill-icon" alt="HTML"/><span class="skill-name">HTML5</span></div>
-                            <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="skill-icon" alt="CSS"/><span class="skill-name">CSS3</span></div>
-                            <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" class="skill-icon" alt="Figma"/><span class="skill-name">UI / UX</span></div>
-                            <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" class="skill-icon" alt="PostgreSQL"/><span class="skill-name">POSTGRESQL</span></div>
-                            <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" class="skill-icon" alt="Supabase"/><span class="skill-name">SUPABASE</span></div>
-                            <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" class="skill-icon white-icon" alt="AWS"/><span class="skill-name">AWS</span></div>
-                            <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" class="skill-icon" alt="OpenCV"/><span class="skill-name">OPENCV</span></div>
-                            <div class="skill-chip"><i class="fas fa-robot skill-icon accent-text"></i><span class="skill-name">OPENAI API</span></div>
-                            <div class="skill-chip"><i class="fas fa-brain skill-icon accent-text"></i><span class="skill-name">ML</span></div>
-                            <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="skill-icon" alt="Git"/><span class="skill-name">GIT</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-5 min-vh-100 d-flex align-items-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="section-title text-center mb-5">Certificados</h2>
-                </div>
-                <div class="col-lg-10 mx-auto">
-                    <div class="floating-card p-4 p-md-5">
-                        
-                        <div class="cert-line">
-                            <div class="cert-info">
-                                <h4>JAVA FUNDAMENTALS</h4>
-                                <span class="cert-school">Senai</span>
+                            
+                            <div class="mt-4 pt-4 border-top border-secondary">
+                                <h6 class="accent-text mb-3">Minhas Redes</h6>
+                                <div class="d-flex gap-2">
+                                    <a href="https://www.linkedin.com/in/lucas-salees/" class="btn-action-outline flex-grow-1 text-center py-2 px-0 redirect-link" data-plataforma="LinkedIn" target="_blank" title="LinkedIn">
+                                        <i class="bi bi-linkedin fs-4"></i>
+                                    </a>
+                                    <a href="https://github.com/lucasSalees" class="btn-action-outline flex-grow-1 text-center py-2 px-0 redirect-link" data-plataforma="GitHub" target="_blank" title="GitHub">
+                                        <i class="bi bi-github fs-4"></i>
+                                    </a>
+                                    <a href="https://www.instagram.com/sales.lucass/" class="btn-action-outline flex-grow-1 text-center py-2 px-0 redirect-link" data-plataforma="Instagram" target="_blank" title="Instagram">
+                                        <i class="bi bi-instagram fs-4"></i>
+                                    </a>
+                                </div>
                             </div>
-                            <button class="btn-action" data-bs-toggle="modal" data-bs-target="#modalCertJava"><i class="fas fa-download"></i></button>
                         </div>
+                    </div>
 
-                        <div class="cert-line">
-                            <div class="cert-info">
-                                <h4>Microsoft AZ-900</h4>
-                                <span class="cert-school">Senai</span>
-                            </div>
-                            <button class="btn-action" data-bs-toggle="modal" data-bs-target="#modalCertAzure"><i class="fas fa-download"></i></button>
+                    <div class="col-lg-7">
+                        <div class="floating-card p-4 p-md-5 h-100">
+                            <h4 class="mb-4 accent-text">Mande uma Mensagem</h4>
+                            <form id="portfolioContactForm" action="https://formsubmit.co/ajax/d9dbf8fbb7c11e0b4f40ef681be33bf5" method="POST" class="needs-validation" novalidate>
+                                <input type="hidden" name="_subject" value="Novo contato via Portfólio!">
+                                <input type="hidden" name="_template" value="table">
+                                <input type="text" name="_honey" style="display:none">
+                                <input type="hidden" name="_captcha" value="false">
+
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <input type="text" name="nome" class="form-control bg-dark text-white border-secondary custom-placeholder py-2" placeholder="Seu nome completo" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="tel" name="telefone" id="telefoneInput" class="form-control bg-dark text-white border-secondary custom-placeholder py-2" placeholder="(00) 00000-0000" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <input type="email" name="email" class="form-control bg-dark text-white border-secondary custom-placeholder py-2" placeholder="Ex: seu.email@dominio.com" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <textarea name="mensagem" class="form-control bg-dark text-white border-secondary custom-placeholder py-2" rows="5" placeholder="Como posso ajudar no seu projeto?" required></textarea>
+                                    </div>
+                                    <div class="col-12 mt-4">
+                                        <button type="submit" class="btn-action w-100 py-3" id="btnEnviarMensagem">ENVIAR MENSAGEM</button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-
-                        <div class="cert-line">
-                            <div class="cert-info">
-                                <h4>Master in English</h4>
-                                <span class="cert-school">CNA</span>
-                            </div>
-                            <button class="btn-action" data-bs-toggle="modal" data-bs-target="#modalCertEnglish"><i class="fas fa-download"></i></button>
-                        </div>
-
-                        <div class="cert-line">
-                            <div class="cert-info">
-                                <h4>Git e GitHub</h4>
-                                <span class="cert-school">DIO</span>
-                            </div>
-                            <button class="btn-action" data-bs-toggle="modal" data-bs-target="#modalGitGitHub"><i class="fas fa-download"></i></button>
-                        </div>
-
-                        <div class="cert-line">
-                            <div class="cert-info">
-                                <h4>Nexa - ML e GenAI na Prática</h4>
-                                <span class="cert-school">DIO</span>
-                            </div>
-                            <button class="btn-action" data-bs-toggle="modal" data-bs-target="#modalCertAws"><i class="fas fa-download"></i></button>
-                        </div>
-
-                        <div class="cert-line border-0 mb-0 pb-0">
-                            <div class="cert-info">
-                                <h4>Learn React</h4>
-                                <span class="cert-school">Scrimba</span>
-                            </div>
-                            <button class="btn-action" data-bs-toggle="modal" data-bs-target="#modalCertReact"><i class="fas fa-download"></i></button>
-                        </div>
-
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="projects" class="py-5 min-vh-100 d-flex align-items-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="section-title text-center mb-5">Projetos</h2>
-                </div>
-            </div>
-            <div class="row g-4 justify-content-center">
-                
-                <div class="col-lg-4">
-                    <div class="project-card h-100">
-                        <div class="project-header">
-                            <h3 class="project-title">Contador de Amor</h3>
-                            <span class="project-status">Concluído</span>
-                        </div>
-                        <div class="project-description">
-                            Site que fiz como presente de Dia dos Namorados para minha namorada. 
-                            Incluí nossas fotos, playlist dedicada e um contador de tempo interativo.
-                            Objetivo foi expressar carinho de forma criativa.
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JS</span><span class="tech-tag">BOOTSTRAP</span>
-                        </div>
-                        <div class="project-links mt-auto">
-                            <a href="https://github.com/LucasSalees/meu_site_romantico" class="btn-action-outline w-100 mb-2" target="_blank">CÓDIGO</a>
-                            <a href="https://contador-de-amor.netlify.app/" class="btn-action w-100" target="_blank">VER PROJETO</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="project-card h-100">
-                        <div class="project-header">
-                            <h3 class="project-title">Segurança Elétrica</h3>
-                            <span class="project-status">Concluído</span>
-                        </div>
-                        <div class="project-description">
-                            Projeto de extensão acadêmica para levar conhecimento sobre práticas seguras de eletricidade a comunidades de baixa renda, incluindo um questionário avaliativo.
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JS</span><span class="tech-tag">BOOTSTRAP</span>
-                        </div>
-                        <div class="project-links mt-auto">
-                            <a href="https://github.com/LucasSalees/seguranca_eletrica_projeto" class="btn-action-outline w-100 mb-2" target="_blank">CÓDIGO</a>
-                            <a href="https://seguranca-eletrica.netlify.app/" class="btn-action w-100" target="_blank">VER PROJETO</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="project-card h-100">
-                        <div class="project-header">
-                            <h3 class="project-title">CTUS</h3>
-                            <span class="project-status">Concluído</span>
-                        </div>
-                        <div class="project-description">
-                            Landing page institucional e acervo digital para o Colóquio Transdisciplinar da UNIP Sorocaba. Desenvolvido com foco em UX/UI, alta performance e design em Glassmorphism.
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JS</span><span class="tech-tag">BOOTSTRAP</span>
-                        </div>
-                        <div class="project-links mt-auto">
-                            <button class="btn-action-disabled w-100 mb-2" disabled>REPO PRIVADO</button>
-                            <a href="https://ctus.com.br" class="btn-action w-100" target="_blank">VER PROJETO</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="project-card h-100">
-                        <div class="project-header">
-                            <h3 class="project-title">brbee.SOLUTIONS</h3>
-                            <span class="project-status">Concluído</span>
-                        </div>
-                        <div class="project-description">
-                            Portal institucional e de captação de talentos para uma marca de soluções digitais. Conta com UX avançada, design em Glassmorphism, scroll horizontal matemático e envio de formulários via AJAX.
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JS</span><span class="tech-tag">BOOTSTRAP</span>
-                        </div>
-                        <div class="project-links mt-auto">
-                            <button class="btn-action-disabled w-100 mb-2" disabled>REPO PRIVADO</button>
-                            <a href="https://brbeesolutions.netlify.app" class="btn-action w-100" target="_blank">VER PROJETO</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="project-card h-100">
-                        <div class="project-header">
-                            <h3 class="project-title">Ouvemed</h3>
-                            <span class="project-status in-progress">SaaS em Andamento</span>
-                        </div>
-                        <div class="project-description">
-                            Sistema SaaS Multi-tenant para gestão médica. Destaca-se por uma arquitetura de segurança Enterprise com RBAC granular (Front e Back), interceptação avançada de JWT e geração de prontuários estruturados utilizando IA Generativa (LLM).
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">JAVA</span>
-                            <span class="tech-tag">SPRING BOOT</span>
-                            <span class="tech-tag">VANILLA JS</span>
-                            <span class="tech-tag">POSTGRESQL</span>
-                            <span class="tech-tag">MULTI-TENANT</span>
-                            <span class="tech-tag">IA GENERATIVA</span>
-                        </div>
-                        <div class="project-links mt-auto">
-                            <button class="btn-action-disabled w-100 mb-2" disabled>REPO PRIVADO</button>
-                            <a href="https://prontuario-automono-develop.netlify.app/" class="btn-action w-100" target="_blank">VER PROJETO</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="project-card h-100">
-                        <div class="project-header">
-                            <h3 class="project-title">WinChurch</h3>
-                            <span class="project-status in-progress">SaaS em Andamento</span>
-                        </div>
-                        <div class="project-description">
-                            Plataforma SaaS Multi-tenant focada na gestão hierárquica eclesiástica (Sede, Congregações e Membros). Desenvolvida com arquitetura robusta de isolamento de dados (Tenant ID), controle de acesso RBAC dinâmico e segregação rigorosa de DTOs (CQRS-lite).
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">JAVA</span>
-                            <span class="tech-tag">SPRING BOOT</span>
-                            <span class="tech-tag">VANILLA JS</span>
-                            <span class="tech-tag">POSTGRESQL</span>
-                            <span class="tech-tag">MULTI-TENANT</span>
-                        </div>
-                        <div class="project-links mt-auto">
-                            <button class="btn-action-disabled w-100 mb-2" disabled>REPO PRIVADO</button>
-                            <button class="btn-action-disabled w-100 mb-2" disabled>PROJETO PRIVADO</button>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-5 min-vh-100 d-flex align-items-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="section-title text-center mb-5">Contato</h2>
-                </div>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <div class="floating-card p-5 h-100 d-flex flex-column justify-content-center">
-                        <h4 class="mb-4 accent-text">Status Atual</h4>
-                        <div class="text-content">
-                            <p><i class="fas fa-map-marker-alt me-2"></i> Votorantim, São Paulo</p>
-                            <p><i class="fas fa-briefcase me-2"></i> Disponível para oportunidades</p>
-                            <p><i class="fas fa-code me-2"></i> Desenvolvimento Full-Stack</p>
-                            <p class="mt-4" style="opacity: 0.6; font-size: 0.9em;">
-                                <i>Hobbies: Treinando Kickboxing, sofrendo pelo Corinthians e cuidando dos meus Shimpakus.</i>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="d-grid gap-3">
-                        <a href="mailto:contactlucassales@gmail.com" class="btn-action text-center py-3">
-                            <i class="fas fa-envelope me-2"></i> ENVIAR E-MAIL
-                        </a>
-                        <a href="https://www.linkedin.com/in/lucas-salees/" class="btn-action-outline text-center py-3" target="_blank">
-                            <i class="fab fa-linkedin me-2"></i> LINKEDIN
-                        </a>
-                        <a href="https://github.com/lucasSalees" class="btn-action-outline text-center py-3" target="_blank">
-                            <i class="fab fa-github me-2"></i> GITHUB
-                        </a>
-                        <a href="https://www.instagram.com/sales.lucass/" class="btn-action-outline text-center py-3" target="_blank">
-                            <i class="fab fa-instagram me-2"></i> INSTAGRAM
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer class="footer py-5 text-center">
         <div class="container">
@@ -400,98 +434,61 @@
                 </div>
                 <div class="modal-footer border-0 d-flex justify-content-center pt-0">
                     <a href="assets/lucasCurriculo.pdf" class="btn-action" download target="_blank">
-                        <i class="fas fa-download me-2"></i> Baixar PDF
+                        <i class="bi bi-download me-2"></i> Baixar PDF
                     </a>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="modal fade custom-modal" id="modalCertJava" tabindex="-1" aria-hidden="true">
+    <div class="modal fade custom-modal" id="dynamicCertModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header border-0 pb-0">
-                    <h5 class="modal-title accent-text">JAVA FUNDAMENTALS</h5>
+                    <h5 class="modal-title accent-text" id="certModalTitle">Título</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body text-center"><p>Faça o download do certificado abaixo.</p></div>
                 <div class="modal-footer border-0 justify-content-center">
-                    <a href="assets/JAVA-FUNDAMENTALS.pdf" class="btn-action" download target="_blank"><i class="fas fa-download me-2"></i> Baixar PDF</a>
+                    <a href="#" id="certModalLink" class="btn-action" download target="_blank">
+                        <i class="bi bi-download me-2"></i> Baixar PDF
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="modal fade custom-modal" id="modalCertAzure" tabindex="-1" aria-hidden="true">
+    <div class="modal fade custom-modal" id="redirectModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header border-0 pb-0">
-                    <h5 class="modal-title accent-text">Microsoft AZ-900</h5>
+                    <h5 class="modal-title accent-text fw-bold">Aviso de Saída</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
-                <div class="modal-body text-center"><p>Faça o download do certificado abaixo.</p></div>
-                <div class="modal-footer border-0 justify-content-center">
-                    <a href="assets/AZ900.pdf" class="btn-action" download target="_blank"><i class="fas fa-download me-2"></i> Baixar PDF</a>
+                <div class="modal-body text-center py-4">
+                    <p>Você está saindo do meu portfólio.</p>
+                    <p class="mt-2 mb-0" id="redirectPlatformName" style="opacity: 0.8; font-size: 0.9em;">Deseja acessar a plataforma externa?</p>
+                </div>
+                <div class="modal-footer border-0 d-flex justify-content-center pt-0 gap-2">
+                    <button type="button" class="btn-action-outline m-0" data-bs-dismiss="modal">Ficar Aqui</button>
+                    <a href="#" id="btnConfirmRedirect" class="btn-action m-0" target="_blank">Continuar</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="modal fade custom-modal" id="modalCertEnglish" tabindex="-1" aria-hidden="true">
+    <div class="modal fade custom-modal" id="sucessoContactModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-header border-0 pb-0">
-                    <h5 class="modal-title accent-text">Master in English</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                <div class="modal-header border-0 pb-0 text-center w-100 justify-content-center">
+                    <h5 class="modal-title accent-text fw-bold w-100"><i class="bi bi-check-circle-fill me-2"></i>Enviado!</h5>
                 </div>
-                <div class="modal-body text-center"><p>Faça o download do certificado abaixo.</p></div>
-                <div class="modal-footer border-0 justify-content-center">
-                    <a href="assets/CNA-INGLES.pdf" class="btn-action" download target="_blank"><i class="fas fa-download me-2"></i> Baixar PDF</a>
+                <div class="modal-body text-center py-4">
+                    <p>Sua mensagem foi entregue com sucesso.</p>
+                    <p class="mt-2 mb-0" style="opacity: 0.8; font-size: 0.9em;">Retornarei o contato o mais breve possível.</p>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade custom-modal" id="modalGitGitHub" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header border-0 pb-0">
-                    <h5 class="modal-title accent-text">Git e GitHub</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body text-center"><p>Faça o download do certificado abaixo.</p></div>
-                <div class="modal-footer border-0 justify-content-center">
-                    <a href="assets/git_github.pdf" class="btn-action" download target="_blank"><i class="fas fa-download me-2"></i> Baixar PDF</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade custom-modal" id="modalCertAws" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header border-0 pb-0">
-                    <h5 class="modal-title accent-text">Nexa - ML e GenAI</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body text-center"><p>Faça o download do certificado abaixo.</p></div>
-                <div class="modal-footer border-0 justify-content-center">
-                    <a href="assets/IA_AWS.pdf" class="btn-action" download target="_blank"><i class="fas fa-download me-2"></i> Baixar PDF</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade custom-modal" id="modalCertReact" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header border-0 pb-0">
-                    <h5 class="modal-title accent-text">Learn React</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body text-center"><p>Certificação em andamento. Em breve!</p></div>
-                <div class="modal-footer border-0 justify-content-center">
-                    <button class="btn-action-disabled" disabled><i class="fas fa-download me-2"></i> Baixar PDF</button>
+                <div class="modal-footer border-0 d-flex justify-content-center pt-0">
+                    <button type="button" class="btn-action" data-bs-dismiss="modal">Fechar</button>
                 </div>
             </div>
         </div>
@@ -499,5 +496,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
+
 </body>
 </html>

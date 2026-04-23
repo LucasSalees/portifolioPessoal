@@ -42,7 +42,7 @@ body {
 
 /* Classe aplicada via JS quando dá scroll */
 .glass-nav.scrolled {
-    background: rgba(24, 20, 18, 0.9) !important;
+    background: rgba(24, 20, 18, 0.3) !important;
     backdrop-filter: blur(12px);
     padding: 0.8rem 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -606,4 +606,10 @@ body {
     .project-links { 
         flex-direction: column; 
     }
+}
+
+/* Correção dos Placeholders no Formulário Dark */
+.custom-placeholder::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+    opacity: 1 !important;
 }
