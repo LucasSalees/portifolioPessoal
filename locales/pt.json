@@ -29,6 +29,7 @@
   "status-progress": "Em Andamento",
   "btn-about-proj": "SOBRE O PROJETO",
   "btn-view-proj": "VER PLATAFORMA",
+  "proj-tech-ai": "IA GENERATIVA",
 
   "proj-title-love": "Contador de Amor",
   "proj-desc-love": "Site que fiz como presente de Dia dos Namorados para minha namorada. Incluí nossas fotos, playlist dedicada e um contador de tempo interativo.",
@@ -128,7 +129,7 @@
   
   "form-title": "Mande uma Mensagem",
   "form-name": "Seu nome completo",
-  "form-phone": "WhatsApp (15 99999-9999)",
+  "form-phone": "(00) 00000-0000",
   "form-email": "Ex: seu.email@dominio.com",
   "form-msg": "Como posso ajudar no seu projeto?",
   "form-btn": "ENVIAR MENSAGEM",

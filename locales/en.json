@@ -29,8 +29,8 @@
   "status-progress": "In Progress",
   "btn-about-proj": "ABOUT THE PROJECT",
   "btn-view-proj": "VIEW PLATFORM",
+  "proj-tech-ai": "GEN AI",
 
-  "proj-title-love": "Love Counter",
   "proj-desc-love": "Website I made as a Valentine's Day gift for my girlfriend. I included our photos, a dedicated playlist, and an interactive time counter.",
   "proj-desc-seguranca": "Academic extension project to bring knowledge about safe electrical practices to low-income communities, including an evaluative questionnaire.",
   "proj-desc-ctus": "Institutional landing page and digital collection for the Transdisciplinary Colloquium of UNIP Sorocaba. Developed with a focus on UX/UI, high performance, and Glassmorphism design.",
@@ -128,7 +128,7 @@
   
   "form-title": "Send a Message",
   "form-name": "Your full name",
-  "form-phone": "WhatsApp (15 99999-9999)",
+  "form-phone": "(00) 00000-0000",
   "form-email": "Ex: your.email@domain.com",
   "form-msg": "How can I help with your project?",
   "form-btn": "SEND MESSAGE",

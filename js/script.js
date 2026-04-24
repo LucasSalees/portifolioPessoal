@@ -12,17 +12,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const globaisHTML = `
             <div class="modal fade custom-modal" id="resumeModal" tabindex="-1" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
                     <div class="modal-content">
                         <div class="modal-header border-0 pb-0">
                             <h5 class="modal-title accent-text fw-bold" data-i18n="modal-resume-title">Currículo Profissional</h5>
                             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body text-center py-4">
-                            <p data-i18n="modal-resume-desc">Clique no botão abaixo para fazer o download do meu currículo em PDF.</p>
+                        <div class="modal-body text-center py-3">
+                            <p data-i18n="modal-resume-desc" class="mb-3">Clique no botão abaixo para fazer o download do meu currículo em PDF.</p>
+                            
+                            <div class="pdf-preview-container" style="width: 100%; height: 60vh; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);">
+                                <iframe id="resumePreview" src="${basePath}assets/LucasCurriculoBr.pdf" width="100%" height="100%" style="border: none;"></iframe>
+                            </div>
                         </div>
-                        <div class="modal-footer border-0 d-flex justify-content-center pt-0">
-                            <a href="${basePath}assets/lucasCurriculo.pdf" class="btn-action" download target="_blank">
+                        <div class="modal-footer border-0 d-flex justify-content-center pt-0 pb-4">
+                            <a href="${basePath}assets/LucasCurriculoBr.pdf" id="resumeDownloadLink" class="btn-action" download target="_blank">
                                 <i class="bi bi-download me-2"></i> <span data-i18n="modal-resume-btn">Baixar PDF</span>
                             </a>
                         </div>
@@ -82,7 +86,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     async function loadTranslations(lang) {
         try {
-            // O caminho do JSON ajusta-se automaticamente com o basePath
             const response = await fetch(`${basePath}locales/${lang}.json`);
             if (!response.ok) throw new Error('Não foi possível carregar as traduções');
             
@@ -90,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
             applyTranslationsToDOM(lang);
             
         } catch (error) {
-            console.warn("i18n local bloqueado por CORS ou ficheiro não encontrado. A usar textos HTML padrão.", error);
+            console.warn("i18n local bloqueado por CORS ou arquivo não encontrado. Rodando com textos padrão do HTML.", error);
         }
     }
 
@@ -116,6 +119,18 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('redirectPlatformName').innerHTML = `${text} <strong>${document.getElementById('btnConfirmRedirect').getAttribute('data-plataforma')}</strong>?`;
         }
 
+        // TROCA DO PDF (DOWNLOAD E PRÉ-VISUALIZAÇÃO) DE ACORDO COM O IDIOMA ATUAL
+        const resumeLink = document.getElementById('resumeDownloadLink');
+        const resumePreview = document.getElementById('resumePreview');
+        const pdfFileName = lang === 'pt' ? 'LucasCurriculoBr.pdf' : 'lucasResumeEn.pdf';
+        
+        if (resumeLink) {
+            resumeLink.setAttribute('href', `${basePath}assets/${pdfFileName}`);
+        }
+        if (resumePreview) {
+            resumePreview.setAttribute('src', `${basePath}assets/${pdfFileName}`);
+        }
+
         localStorage.setItem('portfolio_lang', lang);
     }
 
@@ -126,11 +141,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Inicializa a tradução
     loadTranslations(currentLang);
 
     /* ========================================================================== */
-    /* 2. NAVBAR E MENU MOBILE                                                    */
+    /* 2. NAVBAR & MENU MOBILE                                                    */
     /* ========================================================================== */
     const mainNav = document.getElementById('mainNav');
     const navLinks = document.querySelectorAll('.custom-link');
@@ -146,6 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function updateActiveNavLink() {
         let current = '';
+        const isCasePage = !document.getElementById('home'); 
         
         if (isCasePage) {
             current = 'projects'; 
@@ -317,7 +332,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     /* ========================================================================== */
-    /* 7. FORMULÁRIO DE CONTACTO (AJAX)                                           */
+    /* 7. FORMULÁRIO DE CONTATO (AJAX)                                            */
     /* ========================================================================== */
     const portfolioContactForm = document.getElementById('portfolioContactForm');
     
@@ -366,7 +381,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     /* ========================================================================== */
-    /* 8. ANO DINÂMICO NO RODAPÉ                                                  */
+    /* 8. ANO DINÂMICO NO FOOTER                                                  */
     /* ========================================================================== */
     const timestampElement = document.getElementById('timestamp');
     if (timestampElement) {
