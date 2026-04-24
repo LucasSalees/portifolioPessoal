@@ -2,8 +2,13 @@
 /* Variáveis da Nova Estética: Earthy / Brown Glassmorphism                   */
 /* ========================================================================== */
 
+/* Trava TODAS as transições e animações durante o carregamento inicial da página */
+.preload, .preload * {
+    transition: none !important;
+}
+
 :root {
-    /* Paleta Terrosa / Café */
+    /* Paleta Terrosa / Café (DARK MODE - Padrão) */
     --bg-primary: #181412;    /* Fundo principal: Marrom quase preto */
     --bg-secondary: #231d1a;  /* Fundo dos cartões: Marrom escuro leve */
     --border-color: #362d29;  /* Bordas sutis */
@@ -13,21 +18,42 @@
     
     --text-primary: #e6dfd9;   /* Bege super claro (não branco puro) */
     --text-secondary: #9e948f; /* Bege escurecido para textos longos */
+    
+    --nav-glass-bg: rgba(24, 20, 18, 0.4); /* Fundo da nav scrollada */
 
     /* Fontes */
     --font-primary: 'Playfair Display', serif; /* Títulos elegantes */
-    --font-secondary: 'Inter', sans-serif;     /* Textos limpos e legíveis */
+    --font-secondary: 'Inter', sans-serif;      /* Textos limpos e legíveis */
     
     --border-radius: 16px;
     --transition: all 0.3s ease;
 }
 
+/* ========================================================================== */
+/* TEMA CLARO (LIGHT MODE) - Ativado dinamicamente via JS                     */
+/* ========================================================================== */
+[data-theme="light"] {
+    --bg-primary: #faf8f5;    /* Fundo bege bem claro */
+    --bg-secondary: #ffffff;  /* Fundo dos cartões branco puro */
+    --border-color: #e5dfd9;  /* Bordas sutis bege escuro */
+    
+    --accent-primary: #b35b2d; /* Terracota mais vibrante para contraste no claro */
+    --accent-hover: #c4794f;
+    
+    --text-primary: #2d2420;   /* Marrom bem escuro (quase preto) para títulos */
+    --text-secondary: #5e514a; /* Marrom acinzentado para textos */
+    
+    --nav-glass-bg: rgba(250, 248, 245, 0.4); /* Fundo da nav scrollada no claro */
+}
+
+/* Transição suave para o body e textos quando muda de tema */
 body {
     font-family: var(--font-secondary);
     background-color: var(--bg-primary);
     color: var(--text-primary);
     overflow-x: hidden;
     line-height: 1.6;
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 /* ========================================================================== */
@@ -37,16 +63,16 @@ body {
 .glass-nav {
     background: transparent;
     padding: 1.5rem 0;
-    transition: var(--transition);
+    transition: var(--transition), background-color 0.4s ease;
 }
 
 /* Classe aplicada via JS quando dá scroll */
 .glass-nav.scrolled {
-    background: rgba(24, 20, 18, 0.3) !important;
+    background: var(--nav-glass-bg) !important;
     backdrop-filter: blur(12px);
     padding: 0.8rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand {
@@ -138,12 +164,14 @@ body {
     line-height: 1.1;
     color: var(--text-primary);
     margin-bottom: 1rem;
+    transition: color 0.4s ease;
 }
 
 .hero-subtitle {
     font-size: 1.2rem;
     color: var(--text-secondary);
     font-weight: 300;
+    transition: color 0.4s ease;
 }
 
 .accent-text, .cursor-accent {
@@ -174,7 +202,7 @@ body {
     border-radius: 20px; /* Quadrado arredondado elegante */
     position: relative;
     z-index: 2;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Sombra mais leve para caber no dark e light */
 }
 
 .profile-container::before {
@@ -203,26 +231,28 @@ body {
     font-family: var(--font-primary);
     font-size: 2.8rem;
     color: var(--text-primary);
+    transition: color 0.4s ease;
 }
 
 .floating-card {
     background: var(--bg-secondary);
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
-    transition: var(--transition);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08); /* Sombra suavizada para tema claro também */
+    transition: background-color 0.4s ease, border-color 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .floating-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    border-color: rgba(196, 121, 79, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border-color: var(--accent-primary);
 }
 
 .text-content p {
     margin-bottom: 1.2rem;
     color: var(--text-secondary);
     font-size: 1.05rem;
+    transition: color 0.4s ease;
 }
 
 .highlight {
@@ -256,11 +286,11 @@ body {
 .skill-chip {
     display: flex;
     align-items: center;
-    background: rgba(255, 255, 255, 0.02);
+    background: var(--bg-primary); /* Ajustado para acompanhar a variável */
     border: 1px solid var(--border-color);
     padding: 12px 20px;
     border-radius: 30px;
-    transition: var(--transition);
+    transition: var(--transition), background-color 0.4s ease, border-color 0.4s ease;
 }
 
 .skill-chip:hover {
@@ -276,6 +306,10 @@ body {
     font-size: 1.3rem;
 }
 
+/* Seletor dinâmico para ícones brancos (ex: AWS) que precisam ficar pretos no light mode */
+[data-theme="light"] .white-icon {
+    filter: invert(0) brightness(0) opacity(0.8) !important; /* Força o ícone a ficar escuro */
+}
 .white-icon {
     filter: invert(1) brightness(2) opacity(0.8);
 }
@@ -285,6 +319,7 @@ body {
     font-weight: 600;
     color: var(--text-primary);
     letter-spacing: 1px;
+    transition: color 0.4s ease;
 }
 
 /* ========================================================================== */
@@ -298,6 +333,7 @@ body {
     padding-bottom: 1.2rem;
     margin-bottom: 1.2rem;
     border-bottom: 1px solid var(--border-color);
+    transition: border-color 0.4s ease;
 }
 
 .cert-info h4 {
@@ -305,6 +341,7 @@ body {
     color: var(--text-primary);
     margin-bottom: 0.2rem;
     font-weight: 600;
+    transition: color 0.4s ease;
 }
 
 .cert-school {
@@ -323,12 +360,12 @@ body {
     padding: 2.5rem;
     display: flex;
     flex-direction: column;
-    transition: var(--transition);
+    transition: background-color 0.4s ease, border-color 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
     border-color: var(--accent-primary);
 }
 
@@ -344,6 +381,7 @@ body {
     font-size: 1.4rem;
     color: var(--text-primary);
     margin: 0;
+    transition: color 0.4s ease;
 }
 
 .project-status {
@@ -355,7 +393,7 @@ body {
     font-weight: 600;
 }
 .project-status.in-progress {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--border-color); /* Fundo sutil acompanhando a variável */
     color: var(--text-secondary);
 }
 
@@ -363,6 +401,7 @@ body {
     color: var(--text-secondary);
     font-size: 0.95rem;
     margin-bottom: 2rem;
+    transition: color 0.4s ease;
 }
 
 .project-tech {
@@ -375,10 +414,11 @@ body {
 .tech-tag {
     background: transparent;
     color: var(--text-secondary);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-color);
     padding: 0.3rem 0.8rem;
     border-radius: 4px;
     font-size: 0.75rem;
+    transition: color 0.4s ease, border-color 0.4s ease;
 }
 
 /* ========================================================================== */
@@ -444,7 +484,8 @@ body {
     background: var(--bg-primary);
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.4s ease, border-color 0.4s ease;
 }
 .custom-modal .modal-title {
     font-size: 1.5rem;
@@ -452,6 +493,27 @@ body {
 .custom-modal .modal-body p {
     color: var(--text-secondary);
     font-size: 1.05rem;
+    transition: color 0.4s ease;
+}
+/* Força o ícone de fechar a ser escuro no modo claro */
+[data-theme="light"] .btn-close-white {
+    filter: invert(1) grayscale(100%) brightness(0);
+}
+
+/* Ajustes no formulário de contato para suportar Light Mode */
+.form-control {
+    background-color: var(--bg-primary) !important;
+    color: var(--text-primary) !important;
+    border-color: var(--border-color) !important;
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+.form-control:focus {
+    border-color: var(--accent-primary) !important;
+    box-shadow: 0 0 0 0.25rem rgba(196, 121, 79, 0.25) !important;
+}
+.custom-placeholder::placeholder {
+    color: var(--text-secondary) !important;
+    opacity: 0.6 !important;
 }
 
 /* ========================================================================== */
@@ -461,9 +523,11 @@ body {
 .footer {
     border-top: 1px solid var(--border-color);
     background: var(--bg-primary);
+    transition: background-color 0.4s ease, border-color 0.4s ease;
 }
 .footer-text {
     color: var(--text-secondary);
+    transition: color 0.4s ease;
 }
 
 .btn-top {
@@ -537,6 +601,7 @@ body {
 .scroll-text { 
     color: var(--text-secondary); 
     font-size: 0.75rem; letter-spacing: 3px;
+    transition: color 0.4s ease;
 }
 
 @keyframes bounce {
@@ -556,13 +621,13 @@ body {
         font-size: 2.2rem; 
     }
     .glass-nav { 
-        background: rgba(24, 20, 18, 0.95) !important; 
+        background: var(--bg-secondary) !important; 
         padding: 1rem 0; 
     }
     .custom-link { 
         margin-left: 0; 
         padding: 1rem 0; 
-        border-bottom: 1px solid rgba(255,255,255,0.05); 
+        border-bottom: 1px solid var(--border-color); 
     }
     .custom-link::after { 
         display: none; 
@@ -606,10 +671,4 @@ body {
     .project-links { 
         flex-direction: column; 
     }
-}
-
-/* Correção dos Placeholders no Formulário Dark */
-.custom-placeholder::placeholder {
-    color: rgba(255, 255, 255, 0.6) !important;
-    opacity: 1 !important;
 }

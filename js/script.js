@@ -76,7 +76,39 @@ document.addEventListener('DOMContentLoaded', function() {
     injectGlobalModals();
 
     /* ========================================================================== */
-    /* 1. SISTEMA DE INTERNACIONALIZAÇÃO PROFISSIONAL (FETCH JSON)                */
+    /* 1. SISTEMA DE TEMA PROFISSIONAL (DARK / LIGHT MODE)                        */
+    /* ========================================================================== */
+    const themeToggleBtn = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    
+    // Deteta se o sistema do usuário já usa tema claro nativamente
+    const prefersLightScheme = window.matchMedia("(prefers-color-scheme: light)").matches;
+    
+    let currentTheme = localStorage.getItem('portfolio_theme') || (prefersLightScheme ? 'light' : 'dark');
+
+    function applyTheme(theme) {
+        // Injeta a tag data-theme no <html> para o CSS trocar as variáveis
+        document.documentElement.setAttribute('data-theme', theme);
+        
+        if (themeIcon) {
+            themeIcon.className = theme === 'dark' ? 'bi bi-sun-fill' : 'bi bi-moon-stars-fill';
+        }
+        
+        localStorage.setItem('portfolio_theme', theme);
+    }
+
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+            currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            applyTheme(currentTheme);
+        });
+    }
+
+    // Aplica o tema logo no início
+    applyTheme(currentTheme);
+
+    /* ========================================================================== */
+    /* 1.5 SISTEMA DE INTERNACIONALIZAÇÃO PROFISSIONAL (FETCH JSON)               */
     /* ========================================================================== */
     let currentLang = localStorage.getItem('portfolio_lang') || 'pt';
     let translations = {}; 
@@ -93,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
             applyTranslationsToDOM(lang);
             
         } catch (error) {
-            console.warn("i18n local bloqueado por CORS ou arquivo não encontrado. Rodando com textos padrão do HTML.", error);
+            console.warn("i18n local bloqueado por CORS ou ficheiro não encontrado. A usar textos HTML padrão.", error);
         }
     }
 
@@ -119,7 +151,6 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('redirectPlatformName').innerHTML = `${text} <strong>${document.getElementById('btnConfirmRedirect').getAttribute('data-plataforma')}</strong>?`;
         }
 
-        // TROCA DO PDF (DOWNLOAD E PRÉ-VISUALIZAÇÃO) DE ACORDO COM O IDIOMA ATUAL
         const resumeLink = document.getElementById('resumeDownloadLink');
         const resumePreview = document.getElementById('resumePreview');
         const pdfFileName = lang === 'pt' ? 'LucasCurriculoBr.pdf' : 'lucasResumeEn.pdf';
@@ -144,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function() {
     loadTranslations(currentLang);
 
     /* ========================================================================== */
-    /* 2. NAVBAR & MENU MOBILE                                                    */
+    /* 2. NAVBAR E MENU MOBILE                                                    */
     /* ========================================================================== */
     const mainNav = document.getElementById('mainNav');
     const navLinks = document.querySelectorAll('.custom-link');
@@ -160,8 +191,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function updateActiveNavLink() {
         let current = '';
-        const isCasePage = !document.getElementById('home'); 
-        
         if (isCasePage) {
             current = 'projects'; 
         }
@@ -205,7 +234,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     /* ========================================================================== */
-    /* 3. ANIMAÇÃO DE DIGITAÇÃO (HERO) - INTEGRADO COM i18n                       */
+    /* 3. ANIMAÇÃO DE DIGITAÇÃO (HERO)                                            */
     /* ========================================================================== */
     const typingElement = document.getElementById('typing-text');
     
@@ -289,7 +318,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     /* ========================================================================== */
-    /* 6. MODAIS DINÂMICOS & UX (CERTIFICADOS E REDIRECIONAMENTO)                 */
+    /* 6. MODAIS DINÂMICOS (CERTIFICADOS E REDIRECIONAMENTO)                      */
     /* ========================================================================== */
     const btnCerts = document.querySelectorAll('.btn-cert');
     const dynamicCertModalEl = document.getElementById('dynamicCertModal');
@@ -399,4 +428,12 @@ document.addEventListener('DOMContentLoaded', function() {
             e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
         });
     }
+
+    /* ========================================================================== */
+    /* 10. PREVENÇÃO DE FOUC (PISCADA DE TEMA)                                    */
+    /* ========================================================================== */
+    // Assim que a página termina de carregar, removemos a trava de animações
+    window.addEventListener('load', function() {
+        document.body.classList.remove('preload');
+    });
 });

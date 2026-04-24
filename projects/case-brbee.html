@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body>
+<body class="preload">
 
     <button id="btnTop" class="btn-top" aria-label="Voltar ao topo">
         <i class="bi bi-arrow-up"></i>
@@ -42,8 +42,11 @@
                     <li class="nav-item"><a class="nav-link custom-link" href="../index.html#contact" data-i18n="nav-contact">CONTATO</a></li>
                     <li class="nav-item"><a class="nav-link custom-link" href="#" data-bs-toggle="modal" data-bs-target="#resumeModal" data-i18n="nav-resume">CURRÍCULO</a></li>
                     <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
-                        <button id="langToggle" class="btn-action-outline py-1 px-3" style="font-size: 0.85rem;">
+                        <button id="langToggle" class="btn-action-outline py-1 px-3" style="font-size: 0.85rem;" aria-label="Alternar Idioma">
                             <i class="bi bi-globe me-1"></i> <span id="langText">EN</span>
+                        </button>
+                        <button id="themeToggle" class="btn-action-outline py-1 px-3" style="font-size: 0.85rem;" aria-label="Alternar Tema">
+                            <i class="bi bi-sun-fill" id="themeIcon"></i>
                         </button>
                     </li>
                 </ul>
@@ -182,6 +185,14 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/script.js"></script>
+
+    <script>
+        const savedTheme = localStorage.getItem('portfolio_theme');
+        const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+        if (savedTheme === 'light' || (!savedTheme && prefersLight)) {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+    </script>
 
 </body>
 </html>
